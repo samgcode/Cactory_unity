@@ -8,8 +8,10 @@ public class Hoverable : MonoBehaviour
     public bool hovering = false;
     public SpriteRenderer hoveringRenderer;
     
-    private void Start() {
+    private void Awake() {
         this.tag = "hoverable";
+        Hoverable[] entities = FindObjectsOfType<Hoverable>();
+        id = entities.Length;
     }
 
     private void Update() {

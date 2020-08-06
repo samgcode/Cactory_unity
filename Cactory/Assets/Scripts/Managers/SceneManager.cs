@@ -22,8 +22,6 @@ public class SceneManager : MonoBehaviour
                 } else {
                     tile = Instantiate(tilePrefab, new Vector3(col - 8, row - 5, 0), Quaternion.identity);
                 }
-                Hoverable[] entities = FindObjectsOfType<Hoverable>();
-                tile.GetComponent<Hoverable>().id = entities.Length;
             }
         }
     }
