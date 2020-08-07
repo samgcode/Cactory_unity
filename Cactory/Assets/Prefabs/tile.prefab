@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7263304574796916313}
   - component: {fileID: 4668993797450610619}
   - component: {fileID: 7263304574796916319}
+  - component: {fileID: 8455799766959133184}
   m_Layer: 0
   m_Name: tile
   m_TagString: hoverable
@@ -208,3 +209,18 @@ MonoBehaviour:
   id: 0
   hovering: 0
   hoveringRenderer: {fileID: 7263304574796916313}
+--- !u!114 &8455799766959133184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7263304574796916318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f93a3df7d7841d0962e062351ef8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasCactus: 0
+  hasIron: 0
+  hasMachine: 0

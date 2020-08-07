@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 7263304574796916318, guid: e1632c280013741178a98223efb3ecbe, type: 3}
-  cactusTilePrefab: {fileID: 7263304574796916318, guid: e1632c280013741178a98223efb3ecbe, type: 3}
+  cactusTilePrefab: {fileID: 1375493670818836398, guid: 408514fba034d44cda7f95738fab64ba, type: 3}
   ironTilePrefab: {fileID: 7263304574796916318, guid: e1632c280013741178a98223efb3ecbe, type: 3}
 --- !u!1 &2147436137
 GameObject:
