@@ -45,18 +45,23 @@ public class GameManager : MonoBehaviour
                 if(prevEntity && entity.id != prevEntity.id) {
                     prevEntity.hovering = false;
                 }
-                if(Input.GetMouseButtonDown(0)) {
-                    if(!inventoryOpen) {
-                        if(entity.GetComponent<Tile>()) {
-                            Tile tile = entity.GetComponent<Tile>();
-                            if(tile.hasCactus) {
-                                Debug.Log("cactus");
-                            }
-                            if(tile.hasIron) {
-                                Debug.Log("iron");
+                if(entity.GetComponent<Tile>()) {
+                    Tile tile = entity.GetComponent<Tile>();
+                    if(Input.GetMouseButtonDown(0)) {    
+                        if(!inventoryOpen) {
+                            if(player.selectedItem == "empty") {
+                                player.mineTile(tile);
+                            } else {
+                                if(!tile.hasMachine) {
+                                    player.placeItem(tile);
+                                }
                             }
                         }
-                    } else {
+                    } else if(Input.GetKeyDown(KeyCode.R)) {
+                        player.rotateTile(tile);
+                    }  
+                } else {
+                    if(Input.GetMouseButtonDown(0)) {
                         if(entity.GetComponent<Slot>()) {
                             Slot slot = entity.GetComponent<Slot>();
                             player.selectedItem = slot.item;

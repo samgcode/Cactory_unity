@@ -6,6 +6,7 @@ using TMPro;
 public class Slot : MonoBehaviour 
 {
     public int count;
+    public int id = 0;
 
     public string item;
 

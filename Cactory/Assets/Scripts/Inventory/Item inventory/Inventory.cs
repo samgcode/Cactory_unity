@@ -24,13 +24,14 @@ public class Inventory : MonoBehaviour
         int id = 0;
         for(float row = 0.62f; row >= -0.64f; row-=0.42f) {
             for(float col = -0.62f; col <= 0.64f; col+=0.42f) {
-                GameObject slot = Instantiate(slotPrefab, new Vector3(col, row, -5f), Quaternion.identity);
+                GameObject slot = Instantiate(slotPrefab, new Vector3(col, row, -3f), Quaternion.identity);
                 Slot slotScript = slot.GetComponent<Slot>();
                 if(id < sprites.Length) {
                     slotScript.full = sprites[id];
                     slotScript.empty = emptySprites[id];
                 }
                 slotScript.item = sprites[id].name;
+                slotScript.id = id;
 
                 slot.transform.SetParent(this.transform, false);
                 id++;
@@ -53,7 +54,7 @@ public class Inventory : MonoBehaviour
         };
         Slot[] slots = FindObjectsOfType<Slot>();
         for(int i = 0; i < slots.Length; i++) {
-            slots[i].count = counts[i];
+            slots[i].count = counts[slots[i].id];
         }
     }
 }
