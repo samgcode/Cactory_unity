@@ -52,16 +52,29 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log(tile.hasCactus);
                 if(!tile.hasCactus) {
                     return false;
-                } else {
-                    return true;
                 }
-            } else {
-                return true;
             }
         } else {
             return false;
         }
-        
+        switch(selectedItem) {
+            case "cactus juicer":
+                if(inventory.cactusJuicers >= 1) {
+                    inventory.cactusJuicers--;
+                } else {
+                    return false;
+                }
+            break;
+            case "conveyor":
+                if(inventory.conveyors >= 1) {
+                    inventory.conveyors--;
+                } else {
+                    return false;
+                }
+            break;
+        }
+
+        return true;
     }
 
     public void mineTile(Tile tile) {
@@ -71,7 +84,9 @@ public class PlayerManager : MonoBehaviour
     }
 
     public void rotateTile(Tile tile) {
-        Transform tileTransform = tile.GetComponent<Transform>();
-        tileTransform.Rotate (Vector3.forward * -90);
+        if(tile.hasMachine) {
+            Transform tileTransform = tile.GetComponent<Transform>();
+            tileTransform.Rotate (Vector3.forward * -90);
+        }
     }
 }
