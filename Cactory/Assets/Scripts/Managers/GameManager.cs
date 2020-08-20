@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject inventory;
     public PlayerManager player;
+    public Crafting crafting;
 
     void Start()
     {
@@ -67,6 +68,12 @@ public class GameManager : MonoBehaviour
                             player.selectedItem = slot.item;
                         }
                     }
+                }
+
+                if(entity.GetComponent<Recipe>()) { 
+                    crafting.updateText(entity.GetComponent<Recipe>());
+                } else {
+                    crafting.resetText();
                 }
                 prevEntity = entity;
             }

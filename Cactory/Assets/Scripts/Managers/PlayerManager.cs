@@ -49,7 +49,6 @@ public class PlayerManager : MonoBehaviour
     public bool canPlace(Tile tile) {
         if(!tile.hasMachine) {
             if(selectedItem == "cactus juicer") {
-                Debug.Log(tile.hasCactus);
                 if(!tile.hasCactus) {
                     return false;
                 }
