@@ -226,5 +226,5 @@ MonoBehaviour:
   ingredients:
   - iron
   - cactus
-  - 
-  ingredientCounts: 050000000200000000000000
+  - conveyor
+  ingredientCounts: 050000000200000001000000

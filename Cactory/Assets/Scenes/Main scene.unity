@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9eea34e712ce478ebbae8e4d5d490e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2147436140}
   recipes:
   - {fileID: 5018085676265886728, guid: 781043e74061c44d196d481de820bfa0, type: 3}
   - {fileID: 7490833736630004908, guid: 373d26ebf7759481588a04b839df1fc0, type: 3}
@@ -1022,7 +1023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 40}
+  m_AnchoredPosition: {x: 252.49998, y: 40}
   m_SizeDelta: {x: 200, y: 15.19001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9216854335954290247
@@ -1497,7 +1498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 40}
+  m_AnchoredPosition: {x: 252.49998, y: 40}
   m_SizeDelta: {x: 200, y: 15.19001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9216854336366010319
@@ -2014,7 +2015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 40}
+  m_AnchoredPosition: {x: 252.5, y: 40}
   m_SizeDelta: {x: 200, y: 15.19001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9216854337134963010

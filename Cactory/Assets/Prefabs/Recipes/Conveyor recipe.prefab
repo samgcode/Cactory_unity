@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8447053e37c94f4daf518dbdac73ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  result: cactus juicer
+  result: conveyor
   resultCount: 5
   ingredients:
   - iron

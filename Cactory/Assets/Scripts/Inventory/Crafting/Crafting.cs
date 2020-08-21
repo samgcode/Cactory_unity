@@ -5,6 +5,8 @@ using TMPro;
 
 public class Crafting : MonoBehaviour
 {
+    public PlayerManager player;
+
     public GameObject[] recipes;
 
     public TextMeshPro resultText;
@@ -42,5 +44,23 @@ public class Crafting : MonoBehaviour
             ingredientTexts[i].text = "";
             countTexts[i].text = "";
         }
+    }
+
+    public void craft(Recipe recipe) {
+        if(canCraft(recipe)) {
+            player.addItem(recipe.result, recipe.resultCount);
+            for(int i = 0; i < recipe.ingredients.Length; i++) {
+                player.removeItem(recipe.ingredients[i], recipe.ingredientCounts[i]);
+            }
+        }
+    }
+
+    bool canCraft(Recipe recipe) {
+        for(int i = 0; i < recipe.ingredients.Length; i++) {
+            if(player.checkItem(recipe.ingredients[i], recipe.ingredientCounts[i]) == false) {
+                return false;
+            }
+        }
+        return true;
     }
 }

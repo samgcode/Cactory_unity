@@ -88,4 +88,63 @@ public class PlayerManager : MonoBehaviour
             tileTransform.Rotate (Vector3.forward * -90);
         }
     }
+
+
+    public void addItem(string item, int amount) {
+        switch(item) {
+            case "cactus juicer":
+                inventory.cactusJuicers += amount;
+            break;
+            case "conveyor":
+                inventory.conveyors += amount;
+            break;
+        }
+    }
+
+    public bool checkItem(string item, int amount) {
+        int inventoryAmount = 0;
+        switch(item) {
+            case "cactus":
+                inventoryAmount = inventory.cactus;
+            break;
+            case "iron":
+                inventoryAmount = inventory.iron;
+            break;
+            case "cactus juice":
+                inventoryAmount = inventory.juice;
+            break;
+            case "cactus juicer":
+                inventoryAmount = inventory.cactusJuicers;
+            break;
+            case "conveyor":
+                inventoryAmount = inventory.conveyors;
+            break;
+        }
+
+        if(inventoryAmount < amount) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public void removeItem(string item, int amount) {
+        switch(item) {
+            case "cactus":
+                inventory.cactus -= amount;
+            break;
+            case "iron":
+                inventory.iron -= amount;
+            break;
+            case "cactus juice":
+                inventory.juice -= amount;
+            break;
+            case "cactus juicer":
+                inventory.cactusJuicers -= amount;
+            break;
+            case "conveyor":
+                inventory.conveyors -= amount;
+            break;
+        }
+    }
 }

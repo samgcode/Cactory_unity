@@ -6,10 +6,10 @@ public class Inventory : MonoBehaviour
 {
     public int cactus = 3;
     public int iron = 5;
+    public int juice = 4;
     public int cactusJuicers = 3;
     public int conveyors = 3;
-    public int juice = 4;
-
+    
     public GameObject slotPrefab;
 
     public Sprite[] sprites;

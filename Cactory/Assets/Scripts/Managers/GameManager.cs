@@ -71,7 +71,11 @@ public class GameManager : MonoBehaviour
                 }
 
                 if(entity.GetComponent<Recipe>()) { 
-                    crafting.updateText(entity.GetComponent<Recipe>());
+                    Recipe recipe = entity.GetComponent<Recipe>();
+                    crafting.updateText(recipe);
+                    if(Input.GetMouseButtonDown(0)) {
+                        crafting.craft(recipe);
+                    }
                 } else {
                     crafting.resetText();
                 }
