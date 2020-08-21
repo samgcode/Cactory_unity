@@ -80,6 +80,9 @@ public class PlayerManager : MonoBehaviour
         if(tile.hasCactus) {
             inventory.cactus++;
         }
+        if(tile.hasIron) {
+            inventory.iron++;
+        }
     }
 
     public void rotateTile(Tile tile) {
@@ -92,6 +95,15 @@ public class PlayerManager : MonoBehaviour
 
     public void addItem(string item, int amount) {
         switch(item) {
+            case "cactus":
+                inventory.cactus += amount;
+            break;
+            case "iron":
+                inventory.iron += amount;
+            break;
+            case "cactus juice":
+                inventory.juice += amount;
+            break;
             case "cactus juicer":
                 inventory.cactusJuicers += amount;
             break;

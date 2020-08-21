@@ -79,6 +79,13 @@ public class GameManager : MonoBehaviour
                 } else {
                     crafting.resetText();
                 }
+
+                if(entity.GetComponent<CactusJuice>()) {
+                    if(Input.GetMouseButtonDown(0)) {
+                        player.addItem("cactus juice", 1);
+                        Destroy(entity.gameObject);
+                    }
+                }
                 prevEntity = entity;
             }
         }
