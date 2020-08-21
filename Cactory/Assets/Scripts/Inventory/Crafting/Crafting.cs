@@ -10,7 +10,6 @@ public class Crafting : MonoBehaviour
     public GameObject[] recipes;
 
     public TextMeshPro resultText;
-    public TextMeshPro resultCountText;
     public TextMeshPro[] ingredientTexts;
     public TextMeshPro[] countTexts;
 
@@ -27,8 +26,7 @@ public class Crafting : MonoBehaviour
     }
 
     public void updateText(Recipe recipe) {
-        resultText.text = recipe.result;
-        resultCountText.text = "X " + recipe.resultCount.ToString();
+        resultText.text = recipe.result + " X " + recipe.resultCount.ToString();
         for(int i = 0; i < ingredientTexts.Length; i++) {
             if(recipe.ingredientCounts[i] != 0) {
                 ingredientTexts[i].text = recipe.ingredients[i];
@@ -39,7 +37,6 @@ public class Crafting : MonoBehaviour
 
     public void resetText() {
         resultText.text = "";
-        resultCountText.text = "";
         for(int i = 0; i < ingredientTexts.Length; i++) {
             ingredientTexts[i].text = "";
             countTexts[i].text = "";
