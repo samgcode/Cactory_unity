@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CactusJuicer : MonoBehaviour
 {
-    
     public Transform juiceSpawnpoint;
     public GameObject juicePrefab;
     // Start is called before the first frame update
