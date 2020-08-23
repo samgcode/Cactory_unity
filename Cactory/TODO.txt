@@ -1,0 +1,14 @@
+- make collector
+    - create sprite
+    - program it
+
+power system:
+
+- make sprites
+    - generator
+    - power poles
+- code
+    - make machines run off the power grid
+    - generator
+        - input cactus juice to make power
+    - power pole conections
