@@ -1,14 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - CactusJuice
     - CactusJuicer
+    - Collector
     - Conveyor
     - Crafting
     - FollowMouse
     - GameManager
+    - GroundItem
     - Hoverable
     - Inventory
+    - Miner
     - PlayerManager
     - Recipe
     - SceneManager
@@ -123,6 +125,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14974}
     - Class: 114
       Script: {instanceID: 15030}
+    - Class: 114
+      Script: {instanceID: 19554}
+    - Class: 114
+      Script: {instanceID: 23102}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -346,10 +352,10 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 2b21fb0d200f12949d89a9c9240d393f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CactusJuice
+    className: GroundItem
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -550,7 +556,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 6da5455dcc8702517d0c943e7a695866
+      Hash: 87967982bf1691d0e9bf01d477b5a7fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Inventory
@@ -710,8 +716,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ec8490e27dbb858b58123b3c2fe7e62f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Miner
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Collector
   platform: 2
   scenePathNames:
   - Assets/Scenes/Main scene.unity
-  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Test
-    builds/Test 1.app
+  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Mac
+    OS X/V0.1.4.2.app
