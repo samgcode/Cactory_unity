@@ -103,6 +103,9 @@ public class PlayerManager : MonoBehaviour
             case "miner":
                 inventory.miners += amount;
             break;
+            case "collector":
+                inventory.collectors += amount;
+            break;
         }
     }
 
@@ -126,6 +129,9 @@ public class PlayerManager : MonoBehaviour
             break;
             case "miner":
                 inventoryAmount = inventory.miners;
+            break;
+            case "collector":
+                inventoryAmount = inventory.collectors;
             break;
         }
 
@@ -155,6 +161,9 @@ public class PlayerManager : MonoBehaviour
             break;
             case "miner":
                 inventory.miners -= amount;
+            break;
+            case "collector":
+                inventory.collectors -= amount;
             break;
         }
     }

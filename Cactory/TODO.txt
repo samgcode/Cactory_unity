@@ -1,5 +1,5 @@
 - make collector
-    - create sprite
+    X create sprite
     - program it
 
 power system:

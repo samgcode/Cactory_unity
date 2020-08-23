@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public int cactusJuicers = 3;
     public int conveyors = 3;
     public int miners = 2;
+    public int collectors = 1;
     
     public GameObject slotPrefab;
 
@@ -48,10 +49,10 @@ public class Inventory : MonoBehaviour
 
     void updateItems() {
         int[] counts = {
-            cactus, iron, juice, iron, 
-            cactus, juice, iron, cactus, 
-            juice, iron, cactus, juice, 
-            cactusJuicers, conveyors, miners, conveyors
+            cactus, iron, juice, 0, 
+            0, 0, 0, 0, 
+            0, 0, 0, 0, 
+            cactusJuicers, conveyors, miners, collectors
         };
         Slot[] slots = FindObjectsOfType<Slot>();
         for(int i = 0; i < slots.Length; i++) {
