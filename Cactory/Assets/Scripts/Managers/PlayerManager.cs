@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
 
     public void placeItem(Tile tile) {
         if(selectedItem != "empty") {
-            if(canPlace(tile) == true) {
+            if(canPlace(tile)) {
                 foreach(GameObject prefab in machinePrefabs) {
                     if(prefab.name == selectedItem) {
                         Instantiate(prefab, tile.transform);
@@ -41,6 +41,7 @@ public class PlayerManager : MonoBehaviour
                         
                     }
                 }
+                removeItem(selectedItem, 1);
                 tile.hasMachine = true;
             }
         }  
@@ -53,27 +54,16 @@ public class PlayerManager : MonoBehaviour
                     return false;
                 }
             }
+
+            if(selectedItem == "miner") {
+                if(!tile.hasIron) {
+                    return false;
+                }
+            }
         } else {
             return false;
         }
-        switch(selectedItem) {
-            case "cactus juicer":
-                if(inventory.cactusJuicers >= 1) {
-                    inventory.cactusJuicers--;
-                } else {
-                    return false;
-                }
-            break;
-            case "conveyor":
-                if(inventory.conveyors >= 1) {
-                    inventory.conveyors--;
-                } else {
-                    return false;
-                }
-            break;
-        }
-
-        return true;
+        return checkItem(selectedItem, 1);
     }
 
     public void mineTile(Tile tile) {
@@ -110,6 +100,9 @@ public class PlayerManager : MonoBehaviour
             case "conveyor":
                 inventory.conveyors += amount;
             break;
+            case "miner":
+                inventory.miners += amount;
+            break;
         }
     }
 
@@ -130,6 +123,9 @@ public class PlayerManager : MonoBehaviour
             break;
             case "conveyor":
                 inventoryAmount = inventory.conveyors;
+            break;
+            case "miner":
+                inventoryAmount = inventory.miners;
             break;
         }
 
@@ -156,6 +152,9 @@ public class PlayerManager : MonoBehaviour
             break;
             case "conveyor":
                 inventory.conveyors -= amount;
+            break;
+            case "miner":
+                inventory.miners -= amount;
             break;
         }
     }

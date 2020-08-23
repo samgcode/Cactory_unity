@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public int juice = 4;
     public int cactusJuicers = 3;
     public int conveyors = 3;
+    public int miners = 2;
     
     public GameObject slotPrefab;
 
@@ -50,7 +51,7 @@ public class Inventory : MonoBehaviour
             cactus, iron, juice, iron, 
             cactus, juice, iron, cactus, 
             juice, iron, cactus, juice, 
-            cactusJuicers, conveyors, cactusJuicers, conveyors
+            cactusJuicers, conveyors, miners, conveyors
         };
         Slot[] slots = FindObjectsOfType<Slot>();
         for(int i = 0; i < slots.Length; i++) {
