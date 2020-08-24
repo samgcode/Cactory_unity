@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerManager : MonoBehaviour
 {
     public string selectedItem = "empty";
 
     public Inventory inventory;
+
+    public FollowMouse mouseParticleSystem;
+
+    public TextMeshPro itemCountText;
 
     public SpriteRenderer selectedItemRenderer;
     public Sprite[] sprites;
@@ -24,6 +29,11 @@ public class PlayerManager : MonoBehaviour
                 }
             }
         }   
+        if(selectedItem == "empty") {
+            itemCountText.text = "";
+        } else {
+            itemCountText.text = getItemCount(selectedItem).ToString();
+        }
     }
 
     public void placeItem(Tile tile) {
@@ -69,11 +79,29 @@ public class PlayerManager : MonoBehaviour
     }
 
     public void mineTile(Tile tile) {
-        if(tile.hasCactus) {
-            inventory.cactus++;
+        if(!tile.hasMachine) {
+            if(tile.hasCactus) {
+                inventory.cactus++;
+                mouseParticleSystem.createParticle();
+            }
+            if(tile.hasIron) {
+                inventory.iron++;
+                mouseParticleSystem.createParticle();
+            }
         }
-        if(tile.hasIron) {
-            inventory.iron++;
+    }
+
+    public void breakMachine(Tile tile) {
+        if(tile.hasMachine) {
+            foreach(Transform child in tile.transform) {
+                if(child.gameObject.tag == "machine") {
+                    GameObject machine = child.gameObject;
+                    string name = machine.name.Substring(0, machine.name.LastIndexOf("(Clone)"));
+                    addItem(name, 1);
+                    tile.hasMachine = false;
+                    Destroy(machine);
+                }
+            }
         }
     }
 
@@ -105,6 +133,9 @@ public class PlayerManager : MonoBehaviour
             case "miner":
                 inventory.miners += amount;
             break;
+            case "cactus miner":
+                inventory.miners += amount;
+            break;
             case "collector":
                 inventory.collectors += amount;
             break;
@@ -112,6 +143,16 @@ public class PlayerManager : MonoBehaviour
     }
 
     public bool checkItem(string item, int amount) {
+        int inventoryAmount = getItemCount(item);
+
+        if(inventoryAmount < amount) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public int getItemCount(string item) {
         int inventoryAmount = 0;
         switch(item) {
             case "cactus":
@@ -137,11 +178,7 @@ public class PlayerManager : MonoBehaviour
             break;
         }
 
-        if(inventoryAmount < amount) {
-            return false;
-        } else {
-            return true;
-        }
+        return inventoryAmount;
     }
 
     public void removeItem(string item, int amount) {

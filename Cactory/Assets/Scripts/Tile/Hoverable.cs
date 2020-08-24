@@ -9,7 +9,6 @@ public class Hoverable : MonoBehaviour
     public SpriteRenderer hoveringRenderer;
     
     private void Awake() {
-        this.tag = "hoverable";
         Hoverable[] entities = FindObjectsOfType<Hoverable>();
         id = entities.Length;
     }

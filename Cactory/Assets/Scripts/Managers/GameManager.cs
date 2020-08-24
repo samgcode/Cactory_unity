@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     void onHover(Ray ray, RaycastHit2D hit) {
         hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
         if(hit.collider != null) {
-            if(hit.collider.tag == "hoverable") {
+            if(hit.collider.GetComponent<Hoverable>()) {
                 Hoverable entity = hit.collider.GetComponent<Hoverable>();
                 entity.hovering = true;
                 if(prevEntity && entity.id != prevEntity.id) {
@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
                                 }
                             }
                         }
+                    } else if(Input.GetMouseButtonDown(1)) {
+                        player.breakMachine(tile);
                     } else if(Input.GetKeyDown(KeyCode.R)) {
                         player.rotateTile(tile);
                     }  
