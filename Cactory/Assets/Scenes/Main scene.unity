@@ -713,6 +713,7 @@ MonoBehaviour:
   - {fileID: 984025297707980864, guid: 523d47838d9ed4a80bf5e70ecf7d95ff, type: 3}
   - {fileID: 3017702299198220002, guid: 362116238d09340f9b4997cc10ecc12c, type: 3}
   - {fileID: 2087561073108667861, guid: a5efe5853538a4e06b26f5f90fd9fcb0, type: 3}
+  - {fileID: 1750236631730339601, guid: 78fa9728c52894af7b13b19a9a5160ab, type: 3}
 --- !u!23 &9216854335954290244
 MeshRenderer:
   m_ObjectHideFlags: 0

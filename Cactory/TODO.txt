@@ -1,6 +1,6 @@
-- make collector
+X make collector
     X create sprite
-    - program it
+    X program it
 
 power system:
 
@@ -12,3 +12,18 @@ power system:
     - generator
         - input cactus juice to make power
     - power pole conections
+
+
+X ablitity to mine cactus
+    X make sprites
+    X code
+- removing placed items
+- notification when you mine something
+    - square turns red?
+- shows you if you can place it
+    - number that showshow many of that item you have
+- line up conveyor animations
+- movement
+- title screen
+- menu
+- saving system

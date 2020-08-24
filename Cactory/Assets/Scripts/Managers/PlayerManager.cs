@@ -29,6 +29,9 @@ public class PlayerManager : MonoBehaviour
     public void placeItem(Tile tile) {
         if(selectedItem != "empty") {
             if(canPlace(tile)) {
+                if(selectedItem == "miner" && tile.hasCactus) {
+                    selectedItem = "cactus miner";
+                }
                 foreach(GameObject prefab in machinePrefabs) {
                     if(prefab.name == selectedItem) {
                         Instantiate(prefab, tile.transform);
@@ -54,9 +57,8 @@ public class PlayerManager : MonoBehaviour
                     return false;
                 }
             }
-
             if(selectedItem == "miner") {
-                if(!tile.hasIron) {
+                if(!tile.hasIron && !tile.hasCactus) {
                     return false;
                 }
             }
@@ -160,6 +162,9 @@ public class PlayerManager : MonoBehaviour
                 inventory.conveyors -= amount;
             break;
             case "miner":
+                inventory.miners -= amount;
+            break;
+            case "cactus miner":
                 inventory.miners -= amount;
             break;
             case "collector":
