@@ -37,10 +37,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -92,55 +90,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12092}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12094}
     - Class: 114
-      Script: {instanceID: 12334}
+      Script: {instanceID: 12318}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 12336}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12444}
     - Class: 114
-      Script: {instanceID: 12800}
+      Script: {instanceID: 12640}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 13320}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 13362}
+      Script: {instanceID: 13322}
     - Class: 114
-      Script: {instanceID: 13496}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 13998}
+      Script: {instanceID: 13498}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14000}
     - Class: 114
-      Script: {instanceID: 14342}
+      Script: {instanceID: 14020}
     - Class: 114
-      Script: {instanceID: 14444}
+      Script: {instanceID: 14344}
     - Class: 114
-      Script: {instanceID: 14626}
+      Script: {instanceID: 14446}
     - Class: 114
-      Script: {instanceID: 14678}
+      Script: {instanceID: 14628}
     - Class: 114
-      Script: {instanceID: 14738}
+      Script: {instanceID: 14680}
     - Class: 114
-      Script: {instanceID: 14874}
+      Script: {instanceID: 14740}
     - Class: 114
-      Script: {instanceID: 14904}
+      Script: {instanceID: 14836}
     - Class: 114
-      Script: {instanceID: 14978}
+      Script: {instanceID: 14878}
     - Class: 114
-      Script: {instanceID: 15034}
+      Script: {instanceID: 14908}
     - Class: 114
-      Script: {instanceID: 15088}
+      Script: {instanceID: 14982}
     - Class: 114
-      Script: {instanceID: 26186}
+      Script: {instanceID: 15038}
     - Class: 114
-      Script: {instanceID: 28440}
+      Script: {instanceID: 15092}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,6 +180,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 91b968bea637cc3ec92f2d4adbb60cb9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraController
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -448,7 +452,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: f9f16ad5bb2dbe7ac6b7a458c6acd3b8
+      Hash: 4df24ce99cf98eae2d98740f372e5e18
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneManager
@@ -628,6 +632,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddParticle
+  - hash:
+      serializedVersion: 2
       Hash: 53d4b2dcd187531cb0e91c9e4db84d9d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -740,19 +750,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AddParticle
-  - hash:
-      serializedVersion: 2
-      Hash: f7d33e0fc0f319ce63e1f2d2da9b4298
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main scene.unity
-  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Windows/V0.2.0.0/Cactory.exe
+  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Test
+    builds/Test 3/Cactory.exe

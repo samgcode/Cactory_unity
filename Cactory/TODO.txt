@@ -38,3 +38,6 @@ X movement
 - make all tiles genarated at the start
 - make red cactus spot in inventory blank instead
 - BUG clicking on red cactus selects juice cactus
+- challenge modes
+    - time limit
+    - smaller/different shaped worlds

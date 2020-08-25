@@ -6,37 +6,23 @@ public class CameraController : MonoBehaviour
 {
     public float speed;
 
-    public GameObject singleChunk;
-
-    public Vector4 centerArea;
+    public SceneManager sceneManager;
 
     public Transform camera;
 
-    int centerOffset = 18;
-
-    int ringNumber = 1;
+    public int maxX = 0;
+    public int maxY = 0;
+    public int minX = 0;
+    public int minY = 0;
 
     void Awake() {
-        camera = this.transform;
-        centerArea = new Vector4(camera.position.x, camera.position.y, camera.position.x, camera.position.y);   
-    }
+        int halfWorldSize = sceneManager.worldSize / 2;
+        maxX = halfWorldSize - 10;
+        maxY = halfWorldSize - 6;
 
-    void Update() {
-        Vector3 position = camera.position;
-
-        if( 
-        position.y > centerArea.w || //up
-        position.y < centerArea.y || //down
-        position.x > centerArea.z || //right
-        position.x < centerArea.x ) { //left
-            centerArea.w += centerOffset;
-            centerArea.y -= centerOffset;
-            centerArea.z += centerOffset;
-            centerArea.x -= centerOffset;
-            Debug.Log("exited bounds");
-            generate();
-        }
-    }
+        minX = -1 * (halfWorldSize - 9);
+        minY = -1 * (halfWorldSize - 5);
+    } 
 
     void FixedUpdate()
     {
@@ -44,34 +30,26 @@ public class CameraController : MonoBehaviour
         float yPos = camera.position.y;
 
         if(Input.GetKey(KeyCode.W)) {
-            yPos += speed;
-        } else if(Input.GetKey(KeyCode.S)) {
-            yPos -= speed;
-        } else if(Input.GetKey(KeyCode.D)) {
-            xPos += speed;
-        } else if(Input.GetKey(KeyCode.A)) {
-            xPos -= speed;
-        }
-
-        this.transform.position = new Vector3(xPos, yPos, camera.position.z);
-    }
-
-    void generate() {
-        float rows = (centerArea.z - centerArea.x) / 18;
-        float cols = (centerArea.w - centerArea.y) / 18;
-        for(float y = centerArea.y; y < centerArea.w + 18; y+=18) {
-            if(y == centerArea.y) {
-                for(float x = centerArea.x; x <= centerArea.z; x+=18) {
-                    Instantiate(singleChunk, new Vector3(x, y, 0), Quaternion.identity);
-                }
-            } else if(y == centerArea.w) {
-                for(float x = centerArea.x; x < centerArea.z+18; x+=18) {
-                    Instantiate(singleChunk, new Vector3(x, y, 0), Quaternion.identity);
-                }
-            } else {
-                Instantiate(singleChunk, new Vector3(centerArea.x, y, 0), Quaternion.identity);
-                Instantiate(singleChunk, new Vector3(centerArea.z, y, 0), Quaternion.identity);
+            if(yPos + speed < maxY) {
+                yPos += speed;
+            }
+        }  
+        if(Input.GetKey(KeyCode.S)) {
+            if(yPos - speed > minY) {
+                yPos -= speed;
+            }
+        } 
+        if(Input.GetKey(KeyCode.D)) {
+            if(xPos + speed < maxX) {
+                xPos += speed;
             }
         }
+        if(Input.GetKey(KeyCode.A)) {
+            if(xPos - speed > minX) {
+                xPos -= speed;
+            }
+        }
+
+        camera.position = new Vector3(xPos, yPos, camera.position.z);
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1071114160642127626
 Transform:
@@ -96,11 +96,11 @@ GameObject:
   - component: {fileID: 5018085676265886729}
   - component: {fileID: 5018085676265886966}
   m_Layer: 0
-  m_Name: Cactus juicer recipie
+  m_Name: Cactus juicer recipe
   m_TagString: hoverable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5018085676265886734
 Transform:

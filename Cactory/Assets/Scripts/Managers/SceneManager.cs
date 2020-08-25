@@ -8,20 +8,22 @@ public class SceneManager : MonoBehaviour
     public GameObject tilePrefab;
     public GameObject cactusTilePrefab;
     public GameObject ironTilePrefab;
+
+    public int worldSize = 100;
     void Start()
     {
         Vector3 position = this.transform.position;
-        for(int col = (int)position.x; col < position.x + 18; col++) {
-            for(int row = (int)position.y; row < position.y + 18; row++) {
+        for(int col = (int)0 - worldSize/2; col < 0 + worldSize/2; col++) {
+            for(int row = (int)0 - worldSize/2; row < 0 + worldSize/2; row++) {
                 GameObject tile;
-                if(Random.Range(0, 5) == 1) {
-                    if(Random.Range(0, 8) == 1) {
-                        tile = Instantiate(ironTilePrefab, new Vector3(col - 8, row - 8, 0), Quaternion.identity);    
+                if(Random.Range(0, 12) == 1) {
+                    if(Random.Range(0, 10) == 1) {
+                        tile = Instantiate(ironTilePrefab, new Vector3(col, row, 0), Quaternion.identity);    
                     } else {
-                        tile = Instantiate(cactusTilePrefab, new Vector3(col - 8, row - 8, 0), Quaternion.identity);
+                        tile = Instantiate(cactusTilePrefab, new Vector3(col, row, 0), Quaternion.identity);
                     }
                 } else {
-                    tile = Instantiate(tilePrefab, new Vector3(col - 8, row - 8, 0), Quaternion.identity);
+                    tile = Instantiate(tilePrefab, new Vector3(col, row, 0), Quaternion.identity);
                 }
             }
         }

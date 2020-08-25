@@ -344,9 +344,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
-  singleChunk: {fileID: 1772477605}
-  centerArea: {x: 0, y: 0, z: 0, w: 0}
-  camera: {fileID: 0}
+  sceneManager: {fileID: 1772477607}
+  camera: {fileID: 519420032}
+  maxX: 0
+  maxY: 0
+  minX: 0
+  minY: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -378,7 +381,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 33
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -971,6 +974,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 7263304574796916318, guid: e1632c280013741178a98223efb3ecbe, type: 3}
   cactusTilePrefab: {fileID: 1375493670818836398, guid: 408514fba034d44cda7f95738fab64ba, type: 3}
   ironTilePrefab: {fileID: 9065217321625436494, guid: 2ac2703a81bd045a4a2dbafb9626a96e, type: 3}
+  worldSize: 100
 --- !u!1 &2036332435
 GameObject:
   m_ObjectHideFlags: 0
