@@ -42,20 +42,25 @@ public class PlayerManager : MonoBehaviour
                 if(selectedItem == "miner" && tile.hasCactus) {
                     selectedItem = "cactus miner";
                 }
-                foreach(GameObject prefab in machinePrefabs) {
-                    if(prefab.name == selectedItem) {
-                        Instantiate(prefab, tile.transform);
+                if(getItemType(selectedItem) == "machine") {
+                    foreach(GameObject prefab in machinePrefabs) {
+                        if(prefab.name == selectedItem) {
+                            Instantiate(prefab, tile.transform);
+                        }
                     }
-                }
-                if(selectedItem == "conveyor") {
-                    Conveyor[] conveyors = FindObjectsOfType<Conveyor>();
-                    foreach(Conveyor conveyor in conveyors) {
-                        Animator conveyorObj = conveyor.GetComponent<Animator>();
-                        
+                    if(selectedItem == "conveyor") {
+                        Conveyor[] conveyors = FindObjectsOfType<Conveyor>();
+                        foreach(Conveyor conveyor in conveyors) {
+                            Animator conveyorObj = conveyor.GetComponent<Animator>();
+                            
+                        }
                     }
+                    if(selectedItem == "cactus miner") {
+                        selectedItem = "miner";
+                    }
+                    removeItem(selectedItem, 1);
+                    tile.hasMachine = true;
                 }
-                removeItem(selectedItem, 1);
-                tile.hasMachine = true;
             }
         }  
     }
@@ -208,5 +213,23 @@ public class PlayerManager : MonoBehaviour
                 inventory.collectors -= amount;
             break;
         }
+    }
+
+    public string getItemType(string item) {
+        switch(item) {
+            case "cactus juice":
+                return "usable item";
+            case "cactus juicer":
+                return "machine";
+            case "conveyor":
+                return "machine";
+            case "miner":
+                return "machine";
+            case "cactus miner":
+                return "machine";
+            case "collector":
+                return "machine";
+        }
+        return "item";
     }
 }

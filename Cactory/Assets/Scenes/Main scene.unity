@@ -974,7 +974,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 7263304574796916318, guid: e1632c280013741178a98223efb3ecbe, type: 3}
   cactusTilePrefab: {fileID: 1375493670818836398, guid: 408514fba034d44cda7f95738fab64ba, type: 3}
   ironTilePrefab: {fileID: 9065217321625436494, guid: 2ac2703a81bd045a4a2dbafb9626a96e, type: 3}
-  worldSize: 100
+  worldSize: 10
 --- !u!1 &2036332435
 GameObject:
   m_ObjectHideFlags: 0
