@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AddParticle
     - CactusJuicer
+    - CameraController
     - Collector
     - Conveyor
     - Crafting
@@ -45,6 +47,8 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
   sceneClasses:
@@ -98,37 +102,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12638}
     - Class: 114
-      Script: {instanceID: 12900}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 13318}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 13492}
+      Script: {instanceID: 12902}
     - Class: 114
-      Script: {instanceID: 13994}
+      Script: {instanceID: 13320}
     - Class: 114
-      Script: {instanceID: 14014}
+      Script: {instanceID: 13362}
     - Class: 114
-      Script: {instanceID: 14338}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 14440}
+      Script: {instanceID: 13998}
     - Class: 114
-      Script: {instanceID: 14622}
+      Script: {instanceID: 14018}
     - Class: 114
-      Script: {instanceID: 14674}
+      Script: {instanceID: 14342}
     - Class: 114
-      Script: {instanceID: 14734}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 14870}
+      Script: {instanceID: 14626}
     - Class: 114
-      Script: {instanceID: 14900}
+      Script: {instanceID: 14678}
     - Class: 114
-      Script: {instanceID: 14974}
+      Script: {instanceID: 14738}
     - Class: 114
-      Script: {instanceID: 15030}
+      Script: {instanceID: 14874}
     - Class: 114
-      Script: {instanceID: 19554}
+      Script: {instanceID: 14904}
     - Class: 114
-      Script: {instanceID: 23102}
+      Script: {instanceID: 14978}
+    - Class: 114
+      Script: {instanceID: 15034}
+    - Class: 114
+      Script: {instanceID: 15088}
+    - Class: 114
+      Script: {instanceID: 26186}
+    - Class: 114
+      Script: {instanceID: 28440}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -274,7 +286,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: fb9e55080a3800d9758abc1863843c19
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FollowMouse
@@ -370,6 +382,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: ec8490e27dbb858b58123b3c2fe7e62f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Miner
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -440,6 +458,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Collector
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -664,7 +688,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: e44bcfa18bebfbbdb6dd09518368786f
+      Hash: 64b3b8146aff8e8fda69a5e9d5a6a510
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -718,17 +742,17 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: ec8490e27dbb858b58123b3c2fe7e62f
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Miner
+    className: AddParticle
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: f7d33e0fc0f319ce63e1f2d2da9b4298
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Collector
+    className: CameraController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main scene.unity
-  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Windows/V0.1.4.2/Cactory.exe
+  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Windows/V0.2.0.0/Cactory.exe

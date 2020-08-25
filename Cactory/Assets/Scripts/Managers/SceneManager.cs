@@ -10,17 +10,18 @@ public class SceneManager : MonoBehaviour
     public GameObject ironTilePrefab;
     void Start()
     {
-        for(int col = 0; col < 18; col++) {
-            for(int row = 0; row < 11; row++) {
+        Vector3 position = this.transform.position;
+        for(int col = (int)position.x; col < position.x + 18; col++) {
+            for(int row = (int)position.y; row < position.y + 18; row++) {
                 GameObject tile;
                 if(Random.Range(0, 5) == 1) {
                     if(Random.Range(0, 8) == 1) {
-                        tile = Instantiate(ironTilePrefab, new Vector3(col - 8, row - 5, 0), Quaternion.identity);    
+                        tile = Instantiate(ironTilePrefab, new Vector3(col - 8, row - 8, 0), Quaternion.identity);    
                     } else {
-                        tile = Instantiate(cactusTilePrefab, new Vector3(col - 8, row - 5, 0), Quaternion.identity);
+                        tile = Instantiate(cactusTilePrefab, new Vector3(col - 8, row - 8, 0), Quaternion.identity);
                     }
                 } else {
-                    tile = Instantiate(tilePrefab, new Vector3(col - 8, row - 5, 0), Quaternion.identity);
+                    tile = Instantiate(tilePrefab, new Vector3(col - 8, row - 8, 0), Quaternion.identity);
                 }
             }
         }

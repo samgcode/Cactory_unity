@@ -23,7 +23,18 @@ X notification when you mine something
 X shows you if you can place it
     X number that showshow many of that item you have
 - line up conveyor animations
-- movement
+X movement
 - title screen
 - menu
 - saving system
+- underground conveyors
+- to many items
+- beacons point home
+- semetrical juicer art
+- connected conveyor textures
+- upgrades
+- max world distance
+- zooming out and in
+- make all tiles genarated at the start
+- make red cactus spot in inventory blank instead
+- BUG clicking on red cactus selects juice cactus
