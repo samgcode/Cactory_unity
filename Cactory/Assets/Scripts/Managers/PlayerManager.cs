@@ -51,8 +51,8 @@ public class PlayerManager : MonoBehaviour
                     if(selectedItem == "conveyor") {
                         Conveyor[] conveyors = FindObjectsOfType<Conveyor>();
                         foreach(Conveyor conveyor in conveyors) {
-                            Animator conveyorObj = conveyor.GetComponent<Animator>();
-                            
+                            Animator conveyorAnim = conveyor.GetComponent<Animator>();
+                            conveyorAnim.Play("conveyor belt", 0, 0.0f);
                         }
                     }
                     if(selectedItem == "cactus miner") {
@@ -129,6 +129,9 @@ public class PlayerManager : MonoBehaviour
             case "cactus juice":
                 inventory.juice += amount;
             break;
+            case "beacon":
+                inventory.beacons += amount;
+            break;
             case "cactus juicer":
                 inventory.cactusJuicers += amount;
             break;
@@ -169,6 +172,9 @@ public class PlayerManager : MonoBehaviour
             case "cactus juice":
                 inventoryAmount = inventory.juice;
             break;
+            case "beacon":
+                inventoryAmount = inventory.beacons;
+            break;
             case "cactus juicer":
                 inventoryAmount = inventory.cactusJuicers;
             break;
@@ -197,6 +203,9 @@ public class PlayerManager : MonoBehaviour
             case "cactus juice":
                 inventory.juice -= amount;
             break;
+            case "beacon":
+                inventory.beacons -= amount;
+            break;
             case "cactus juicer":
                 inventory.cactusJuicers -= amount;
             break;
@@ -219,6 +228,8 @@ public class PlayerManager : MonoBehaviour
         switch(item) {
             case "cactus juice":
                 return "usable item";
+            case "beacon":
+                return "machine";
             case "cactus juicer":
                 return "machine";
             case "conveyor":
