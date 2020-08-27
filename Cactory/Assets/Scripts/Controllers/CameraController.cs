@@ -8,12 +8,14 @@ public class CameraController : MonoBehaviour
 
     public SceneManager sceneManager;
 
-    public Transform camera;
+    public Camera camera;
 
     public int maxX = 0;
     public int maxY = 0;
     public int minX = 0;
     public int minY = 0;
+
+    public float zoomSpeed;
 
     void Awake() {
         int halfWorldSize = sceneManager.worldSize / 2;
@@ -26,8 +28,8 @@ public class CameraController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float xPos = camera.position.x;
-        float yPos = camera.position.y;
+        float xPos = this.transform.position.x;
+        float yPos = this.transform.position.y;
 
         if(Input.GetKey(KeyCode.W)) {
             if(yPos + speed < maxY) {
@@ -50,6 +52,16 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        camera.position = new Vector3(xPos, yPos, camera.position.z);
+        this.transform.position = new Vector3(xPos, yPos, this.transform.position.z);
+
+        if(Input.GetAxis("Mouse ScrollWheel") > 0f) {
+            if(camera.orthographicSize > 2) {
+                camera.orthographicSize -= zoomSpeed;
+            }
+        } else if(Input.GetAxis("Mouse ScrollWheel") < 0f) {
+            if(camera.orthographicSize < 10) {
+                camera.orthographicSize += zoomSpeed;
+            }
+        }
     }
 }

@@ -1,7 +1,3 @@
-X make collector
-    X create sprite
-    X program it
-
 power system:
 
 - make sprites
@@ -13,7 +9,23 @@ power system:
         - input cactus juice to make power
     - power pole conections
 
+- connected conveyor textures
+- title screen
+- menu
+- underground conveyors
+- to many items
+- world border textures
+    - water ?
 
+- upgrades
+- saving system
+- challenge modes
+    - time limit
+    - smaller/different shaped worlds
+
+X make collector
+    X create sprite
+    X program it
 X ablitity to mine cactus
     X make sprites
     X code
@@ -24,20 +36,10 @@ X shows you if you can place it
     X number that showshow many of that item you have
 X line up conveyor animations
 X movement
-- title screen
-- menu
-- saving system
-- underground conveyors
-- to many items
 X beacons point home
 X semetrical juicer art
-- connected conveyor textures
-- upgrades
 X max world distance
-- zooming out and in
+X zooming out and in
 X make all tiles genarated at the start
 X make red cactus spot in inventory blank instead
 X BUG clicking on red cactus selects juice cactus
-- challenge modes
-    - time limit
-    - smaller/different shaped worlds
