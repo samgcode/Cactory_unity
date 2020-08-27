@@ -29,15 +29,15 @@ X movement
 - saving system
 - underground conveyors
 - to many items
-- beacons point home
+X beacons point home
 X semetrical juicer art
 - connected conveyor textures
 - upgrades
 X max world distance
 - zooming out and in
-- make all tiles genarated at the start
-- make red cactus spot in inventory blank instead
-- BUG clicking on red cactus selects juice cactus
+X make all tiles genarated at the start
+X make red cactus spot in inventory blank instead
+X BUG clicking on red cactus selects juice cactus
 - challenge modes
     - time limit
     - smaller/different shaped worlds

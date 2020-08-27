@@ -507,7 +507,9 @@ MonoBehaviour:
   cactus: 5
   iron: 10
   juice: 5
+  crystals: 0
   beacons: 1
+  drills: 0
   cactusJuicers: 2
   conveyors: 5
   miners: 0
@@ -517,13 +519,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1eb416ae8de01419ea3a6cad36a22d39, type: 3}
   - {fileID: 21300000, guid: df814b6268aa747838dc48fe94dde047, type: 3}
   - {fileID: 21300000, guid: cd529d1175f6f4a74b68c57bed45f410, type: 3}
-  - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
+  - {fileID: 21300000, guid: 3a095d7a3445c46d49b83aa1ade26eed, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: cde427a5af2d845a18ad2c3fc750e353, type: 3}
-  - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
+  - {fileID: 21300000, guid: 969511333aee849518c13f60b2cefce2, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: c0acc3c8b9bcb4a87af762e3deaf3a5d, type: 3}
@@ -531,16 +533,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1ac83928531b7475d9390e0407f817e7, type: 3}
   - {fileID: 21300000, guid: 433415888b6b745ea886929e2896599f, type: 3}
   emptySprites:
-  - {fileID: 21300000, guid: c8426536847914691bcf34dc80616b25, type: 3}
-  - {fileID: 21300000, guid: c8426536847914691bcf34dc80616b25, type: 3}
-  - {fileID: 21300000, guid: c8426536847914691bcf34dc80616b25, type: 3}
-  - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
+  - {fileID: 21300000, guid: 455fdf86efd154fcc9e04e9c24ad2e64, type: 3}
+  - {fileID: 21300000, guid: 1eeccfd78bc7d48dab2daa9b61ae5c5a, type: 3}
+  - {fileID: 21300000, guid: 89e41349cbeaf47fb803e97a0aa933ca, type: 3}
+  - {fileID: 21300000, guid: 98a7fe95d4c4a4925b67d6a6a19b9e7e, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: e63b8bb95af4e4ebd98941b785eb7435, type: 3}
-  - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
+  - {fileID: 21300000, guid: a1aa8dc65dd624154987f86503c6f35a, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
   - {fileID: 21300000, guid: 1ecdf02f700d44fed96272dca7350ab9, type: 3}
@@ -1072,7 +1074,8 @@ MonoBehaviour:
   tilePrefab: {fileID: 7263304574796916318, guid: e1632c280013741178a98223efb3ecbe, type: 3}
   cactusTilePrefab: {fileID: 1375493670818836398, guid: 408514fba034d44cda7f95738fab64ba, type: 3}
   ironTilePrefab: {fileID: 9065217321625436494, guid: 2ac2703a81bd045a4a2dbafb9626a96e, type: 3}
-  worldSize: 75
+  crystalTilePrefab: {fileID: 2223981735865878105, guid: 14756e398917441c88a847e13bb90193, type: 3}
+  worldSize: 50
 --- !u!1 &2036332435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1187,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1ac83928531b7475d9390e0407f817e7, type: 3}
   - {fileID: 21300000, guid: 433415888b6b745ea886929e2896599f, type: 3}
   - {fileID: 21300000, guid: cde427a5af2d845a18ad2c3fc750e353, type: 3}
+  - {fileID: 21300000, guid: 969511333aee849518c13f60b2cefce2, type: 3}
+  - {fileID: 21300000, guid: 3a095d7a3445c46d49b83aa1ade26eed, type: 3}
   machinePrefabs:
   - {fileID: 585398390193041129, guid: 803f379d9e7a249c8af6a2c56dcf8a2a, type: 3}
   - {fileID: 984025297707980864, guid: 523d47838d9ed4a80bf5e70ecf7d95ff, type: 3}
@@ -1191,6 +1196,7 @@ MonoBehaviour:
   - {fileID: 2087561073108667861, guid: a5efe5853538a4e06b26f5f90fd9fcb0, type: 3}
   - {fileID: 1750236631730339601, guid: 78fa9728c52894af7b13b19a9a5160ab, type: 3}
   - {fileID: 2856068979011549689, guid: 3ca017d32c2804fa6ad70975c57bad5f, type: 3}
+  - {fileID: 5935327310531144706, guid: 9ce4d224fc27340e5b4caa9fcbb69236, type: 3}
 --- !u!23 &9216854335954290244
 MeshRenderer:
   m_ObjectHideFlags: 0

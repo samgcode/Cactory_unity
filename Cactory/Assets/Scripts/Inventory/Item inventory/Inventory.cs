@@ -7,8 +7,10 @@ public class Inventory : MonoBehaviour
     public int cactus = 3;
     public int iron = 5;
     public int juice = 4;
+    public int crystals = 0;
 
     public int beacons = 1;
+    public int drills = 0;
     public int cactusJuicers = 3;
     public int conveyors = 3;
     public int miners = 2;
@@ -51,9 +53,9 @@ public class Inventory : MonoBehaviour
 
     void updateItems() {
         int[] counts = {
-            cactus, iron, juice, 0, 
+            cactus, iron, juice, crystals, 
             0, 0, 0, 0, 
-            beacons, 0, 0, 0, 
+            beacons, drills, 0, 0, 
             cactusJuicers, conveyors, miners, collectors
         };
         Slot[] slots = FindObjectsOfType<Slot>();

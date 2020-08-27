@@ -77,6 +77,11 @@ public class PlayerManager : MonoBehaviour
                     return false;
                 }
             }
+            if(selectedItem == "laser drill") {
+                if(!tile.hasCrystal) {
+                    return false;
+                }
+            }
         } else {
             return false;
         }
@@ -91,6 +96,10 @@ public class PlayerManager : MonoBehaviour
             }
             if(tile.hasIron) {
                 inventory.iron++;
+                mouseParticleSystem.createParticle();
+            }
+            if(tile.hasCrystal) {
+                inventory.crystals++;
                 mouseParticleSystem.createParticle();
             }
         }
@@ -129,6 +138,9 @@ public class PlayerManager : MonoBehaviour
             case "cactus juice":
                 inventory.juice += amount;
             break;
+            case "crystal":
+                inventory.crystals += amount;
+            break;
             case "beacon":
                 inventory.beacons += amount;
             break;
@@ -146,6 +158,9 @@ public class PlayerManager : MonoBehaviour
             break;
             case "collector":
                 inventory.collectors += amount;
+            break;
+            case "laser drill":
+                inventory.drills += amount;
             break;
         }
     }
@@ -172,6 +187,9 @@ public class PlayerManager : MonoBehaviour
             case "cactus juice":
                 inventoryAmount = inventory.juice;
             break;
+            case "crystal":
+                inventoryAmount = inventory.crystals;
+            break;
             case "beacon":
                 inventoryAmount = inventory.beacons;
             break;
@@ -186,6 +204,9 @@ public class PlayerManager : MonoBehaviour
             break;
             case "collector":
                 inventoryAmount = inventory.collectors;
+            break;
+            case "laser drill":
+                inventoryAmount = inventory.drills;
             break;
         }
 
@@ -202,6 +223,9 @@ public class PlayerManager : MonoBehaviour
             break;
             case "cactus juice":
                 inventory.juice -= amount;
+            break;
+            case "crystal":
+                inventory.crystals -= amount;
             break;
             case "beacon":
                 inventory.beacons -= amount;
@@ -221,6 +245,9 @@ public class PlayerManager : MonoBehaviour
             case "collector":
                 inventory.collectors -= amount;
             break;
+            case "laser drill":
+                inventory.drills -= amount;
+            break;
         }
     }
 
@@ -239,6 +266,8 @@ public class PlayerManager : MonoBehaviour
             case "cactus miner":
                 return "machine";
             case "collector":
+                return "machine";
+            case "laser drill":
                 return "machine";
         }
         return "item";

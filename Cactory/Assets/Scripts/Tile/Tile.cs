@@ -6,5 +6,6 @@ public class Tile : MonoBehaviour
 {
     public bool hasCactus = false;
     public bool hasIron = false;
+    public bool hasCrystal = false;
     public bool hasMachine = false;
 }
