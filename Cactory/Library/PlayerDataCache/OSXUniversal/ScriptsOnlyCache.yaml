@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AddParticle
+    - Arrow
+    - Beacon
     - CactusJuicer
     - CameraController
     - Collector
@@ -92,55 +94,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12092}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12094}
     - Class: 114
-      Script: {instanceID: 12334}
+      Script: {instanceID: 12318}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 12336}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12444}
     - Class: 114
-      Script: {instanceID: 12800}
+      Script: {instanceID: 12640}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 12732}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 13320}
+      Script: {instanceID: 12806}
     - Class: 114
-      Script: {instanceID: 13362}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 13496}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 13998}
+      Script: {instanceID: 13326}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 13368}
     - Class: 114
-      Script: {instanceID: 14342}
+      Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 14444}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 14626}
+      Script: {instanceID: 14024}
     - Class: 114
-      Script: {instanceID: 14678}
+      Script: {instanceID: 14348}
     - Class: 114
-      Script: {instanceID: 14738}
+      Script: {instanceID: 14450}
     - Class: 114
-      Script: {instanceID: 14874}
+      Script: {instanceID: 14632}
     - Class: 114
-      Script: {instanceID: 14904}
+      Script: {instanceID: 14684}
     - Class: 114
-      Script: {instanceID: 14978}
+      Script: {instanceID: 14744}
     - Class: 114
-      Script: {instanceID: 15034}
+      Script: {instanceID: 14840}
     - Class: 114
-      Script: {instanceID: 15088}
+      Script: {instanceID: 14882}
     - Class: 114
-      Script: {instanceID: 26186}
+      Script: {instanceID: 14912}
     - Class: 114
-      Script: {instanceID: 28440}
+      Script: {instanceID: 14986}
+    - Class: 114
+      Script: {instanceID: 15042}
+    - Class: 114
+      Script: {instanceID: 15096}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -182,6 +188,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 91b968bea637cc3ec92f2d4adbb60cb9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraController
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -382,6 +394,18 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 5de3619f2e07920bf3f5d7610c0d811b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Arrow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Beacon
+  - hash:
+      serializedVersion: 2
       Hash: ec8490e27dbb858b58123b3c2fe7e62f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -448,7 +472,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: f9f16ad5bb2dbe7ac6b7a458c6acd3b8
+      Hash: 341559f176b33a4c383030d82937dc31
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneManager
@@ -580,7 +604,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 87967982bf1691d0e9bf01d477b5a7fc
+      Hash: 26a903436a4f1d1f82c57fc276a01a0c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Inventory
@@ -604,7 +628,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 70572b70b209314eb6204ddbce78a6cf
+      Hash: 6d02d711ef7fcfb198a46657a03b5d5f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tile
@@ -626,6 +650,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AddParticle
   - hash:
       serializedVersion: 2
       Hash: 53d4b2dcd187531cb0e91c9e4db84d9d
@@ -740,20 +770,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AddParticle
-  - hash:
-      serializedVersion: 2
-      Hash: f7d33e0fc0f319ce63e1f2d2da9b4298
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraController
   platform: 2
   scenePathNames:
   - Assets/Scenes/Main scene.unity
   playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Mac
-    OS X/V0.2.0.0.app
+    OS X/V0.3.2.0.app

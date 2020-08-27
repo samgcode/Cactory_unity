@@ -124,7 +124,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7490833736630004908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -227,4 +227,4 @@ MonoBehaviour:
   - iron
   - cactus
   - cactus juice
-  ingredientCounts: 0a0000000100000005000000
+  ingredientCounts: 050000000500000005000000

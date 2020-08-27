@@ -145,7 +145,7 @@ MonoBehaviour:
   - iron
   - crystal
   - cactus
-  ingredientCounts: 140000000200000005000000
+  ingredientCounts: 1e000000320000000a000000
 --- !u!1 &5409616216563999317
 GameObject:
   m_ObjectHideFlags: 0

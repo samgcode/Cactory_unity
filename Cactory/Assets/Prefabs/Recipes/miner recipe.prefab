@@ -143,9 +143,9 @@ MonoBehaviour:
   resultCount: 1
   ingredients:
   - iron
-  - cactus juice
+  - cactus
   - conveyor
-  ingredientCounts: 0a0000000400000001000000
+  ingredientCounts: 1e0000000a00000001000000
 --- !u!1 &7120597334680481001
 GameObject:
   m_ObjectHideFlags: 0

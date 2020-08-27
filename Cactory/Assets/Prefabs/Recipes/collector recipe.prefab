@@ -143,9 +143,9 @@ MonoBehaviour:
   resultCount: 1
   ingredients:
   - iron
-  - cactus juice
+  - crystal
   - cactus
-  ingredientCounts: 0f0000000200000005000000
+  ingredientCounts: 320000000a00000019000000
 --- !u!1 &6046803774320349818
 GameObject:
   m_ObjectHideFlags: 0

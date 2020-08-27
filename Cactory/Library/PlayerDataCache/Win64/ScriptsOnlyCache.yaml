@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AddParticle
+    - Arrow
+    - Beacon
     - CactusJuicer
     - CameraController
     - Collector
@@ -37,8 +39,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -102,43 +106,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12640}
     - Class: 114
-      Script: {instanceID: 12802}
+      Script: {instanceID: 12732}
     - Class: 114
-      Script: {instanceID: 12846}
+      Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 12904}
+      Script: {instanceID: 12806}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 13364}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 13498}
+      Script: {instanceID: 13326}
     - Class: 114
-      Script: {instanceID: 14000}
+      Script: {instanceID: 13368}
     - Class: 114
-      Script: {instanceID: 14020}
+      Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 14344}
+      Script: {instanceID: 14004}
     - Class: 114
-      Script: {instanceID: 14446}
+      Script: {instanceID: 14024}
     - Class: 114
-      Script: {instanceID: 14628}
+      Script: {instanceID: 14348}
     - Class: 114
-      Script: {instanceID: 14680}
+      Script: {instanceID: 14450}
     - Class: 114
-      Script: {instanceID: 14740}
+      Script: {instanceID: 14632}
     - Class: 114
-      Script: {instanceID: 14836}
+      Script: {instanceID: 14684}
     - Class: 114
-      Script: {instanceID: 14878}
+      Script: {instanceID: 14744}
     - Class: 114
-      Script: {instanceID: 14908}
+      Script: {instanceID: 14840}
     - Class: 114
-      Script: {instanceID: 14982}
+      Script: {instanceID: 14882}
     - Class: 114
-      Script: {instanceID: 15038}
+      Script: {instanceID: 14912}
     - Class: 114
-      Script: {instanceID: 15092}
+      Script: {instanceID: 14986}
+    - Class: 114
+      Script: {instanceID: 15042}
+    - Class: 114
+      Script: {instanceID: 15096}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -386,6 +394,18 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 5de3619f2e07920bf3f5d7610c0d811b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Arrow
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Beacon
+  - hash:
+      serializedVersion: 2
       Hash: ec8490e27dbb858b58123b3c2fe7e62f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -452,7 +472,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 4df24ce99cf98eae2d98740f372e5e18
+      Hash: 341559f176b33a4c383030d82937dc31
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneManager
@@ -584,7 +604,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 87967982bf1691d0e9bf01d477b5a7fc
+      Hash: 26a903436a4f1d1f82c57fc276a01a0c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Inventory
@@ -608,7 +628,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 70572b70b209314eb6204ddbce78a6cf
+      Hash: 6d02d711ef7fcfb198a46657a03b5d5f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tile
@@ -753,5 +773,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main scene.unity
-  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Test
-    builds/Test 3/Cactory.exe
+  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Windows/V0.3.2.0/Cactory.exe

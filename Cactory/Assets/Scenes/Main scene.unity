@@ -226,7 +226,7 @@ MonoBehaviour:
   - {fileID: 3246611500377645049, guid: d923e5a3b2736413181845a967772d52, type: 3}
   - {fileID: 2032734796892283242, guid: 99862d16486f949d1805a939cdd18b9e, type: 3}
   - {fileID: 346186941583151429, guid: 4931f4baa33d84884acb6415bc2af7a4, type: 3}
-  - {fileID: 5018085676265886728, guid: 781043e74061c44d196d481de820bfa0, type: 3}
+  - {fileID: 7447895261687941700, guid: 59c028e0c5e624427b245765fd2c09d9, type: 3}
   - {fileID: 5018085676265886728, guid: 781043e74061c44d196d481de820bfa0, type: 3}
   - {fileID: 5018085676265886728, guid: 781043e74061c44d196d481de820bfa0, type: 3}
   resultText: {fileID: 9216854336006094683}
@@ -504,16 +504,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143b46eba24ae472c8d28e0956e0d5d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cactus: 5
-  iron: 10
-  juice: 5
+  cactus: 0
+  iron: 0
+  juice: 0
   crystals: 0
-  beacons: 1
+  beacons: 0
   drills: 0
-  cactusJuicers: 2
-  conveyors: 5
+  cactusJuicers: 1
+  conveyors: 0
   miners: 0
-  collectors: 1
+  collectors: 0
   slotPrefab: {fileID: 5814432234093476985, guid: d0adbe56a8e0248338cf05ad7beb6726, type: 3}
   sprites:
   - {fileID: 21300000, guid: 1eb416ae8de01419ea3a6cad36a22d39, type: 3}
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   cactusTilePrefab: {fileID: 1375493670818836398, guid: 408514fba034d44cda7f95738fab64ba, type: 3}
   ironTilePrefab: {fileID: 9065217321625436494, guid: 2ac2703a81bd045a4a2dbafb9626a96e, type: 3}
   crystalTilePrefab: {fileID: 2223981735865878105, guid: 14756e398917441c88a847e13bb90193, type: 3}
-  worldSize: 50
+  worldSize: 100
 --- !u!1 &2036332435
 GameObject:
   m_ObjectHideFlags: 0
