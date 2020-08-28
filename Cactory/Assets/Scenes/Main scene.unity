@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
-  sceneManager: {fileID: 1772477607}
+  mapGenerator: {fileID: 1772477607}
   camera: {fileID: 519420031}
   maxX: 0
   maxY: 0
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 1772477606}
   - component: {fileID: 1772477607}
   m_Layer: 0
-  m_Name: Scene manager
+  m_Name: Map generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   cactusTilePrefab: {fileID: 1375493670818836398, guid: 408514fba034d44cda7f95738fab64ba, type: 3}
   ironTilePrefab: {fileID: 9065217321625436494, guid: 2ac2703a81bd045a4a2dbafb9626a96e, type: 3}
   crystalTilePrefab: {fileID: 2223981735865878105, guid: 14756e398917441c88a847e13bb90193, type: 3}
-  worldSize: 50
+  worldSize: 100
 --- !u!1 &2036332435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,8 +1159,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryOpen: 0
   inventory: {fileID: 1048122946}
+  mapGenerator: {fileID: 1772477607}
   player: {fileID: 2147436140}
   crafting: {fileID: 39366516}
+  settings: {fileID: 0}
 --- !u!114 &2147436140
 MonoBehaviour:
   m_ObjectHideFlags: 0

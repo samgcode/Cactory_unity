@@ -8,11 +8,16 @@ public class GameManager : MonoBehaviour
     public bool inventoryOpen;
 
     public GameObject inventory;
+    public GenerateMap mapGenerator;
     public PlayerManager player;
     public Crafting crafting;
+    public Settings settings;
 
     void Start()
     {
+        settings = FindObjectOfType<Settings>();
+        mapGenerator.generateWorld(settings.worldSize);
+
         inventoryOpen = false;
     }
 

@@ -10,12 +10,14 @@ power system:
     - power pole conections
 
 - connected conveyor textures
-- title screen
 - menu
 - underground conveyors
 - to many items
 - world border textures
     - water ?
+- BUG rotating machines moves produced items
+- BUG inventory is bigger when zooming in
+- save machine rotations
 
 - upgrades
 - saving system
@@ -43,3 +45,4 @@ X zooming out and in
 X make all tiles genarated at the start
 X make red cactus spot in inventory blank instead
 X BUG clicking on red cactus selects juice cactus
+X title screen

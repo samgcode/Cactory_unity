@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public float speed;
 
-    public SceneManager sceneManager;
+    public GenerateMap mapGenerator;
 
     public Camera camera;
 
@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
     public float zoomSpeed;
 
     void Awake() {
-        int halfWorldSize = sceneManager.worldSize / 2;
+        int halfWorldSize = mapGenerator.worldSize / 2;
         maxX = halfWorldSize - 10;
         maxY = halfWorldSize - 6;
 
