@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Miner : MonoBehaviour
 {
-    public Transform ironSpawnpoint;
-    public GameObject ironPrefab;
+    public Transform itemSpawnpoint;
+    public GameObject itemPrefab;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("spawnIron", 1f, 3f);
+        InvokeRepeating("spawnItem", 1f, 3f);
     }
-    void spawnIron() {
-        Instantiate(ironPrefab, ironSpawnpoint);
+    void spawnItem() {
+        Instantiate(itemPrefab, itemSpawnpoint.position, Quaternion.identity);
     }
 }

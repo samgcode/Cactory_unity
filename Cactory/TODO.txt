@@ -15,7 +15,6 @@ power system:
 - to many items
 - world border textures
     - water ?
-- BUG rotating machines moves produced items
 - BUG inventory is bigger when zooming in
 - save machine rotations
 
@@ -46,3 +45,4 @@ X make all tiles genarated at the start
 X make red cactus spot in inventory blank instead
 X BUG clicking on red cactus selects juice cactus
 X title screen
+X BUG rotating machines moves produced items

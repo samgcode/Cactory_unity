@@ -8,6 +8,8 @@ public class CameraController : MonoBehaviour
 
     public GenerateMap mapGenerator;
 
+    public Transform inventory;
+
     public Camera camera;
 
     public int maxX = 0;
@@ -30,6 +32,7 @@ public class CameraController : MonoBehaviour
     {
         float xPos = this.transform.position.x;
         float yPos = this.transform.position.y;
+        float zPos = this.transform.position.z;
 
         if(Input.GetKey(KeyCode.W)) {
             if(yPos + speed < maxY) {
@@ -52,16 +55,25 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        this.transform.position = new Vector3(xPos, yPos, this.transform.position.z);
+        float scaleX = inventory.localScale.x;
+        float scaleY = inventory.localScale.y;
+        float scaleZ = inventory.localScale.z;
 
         if(Input.GetAxis("Mouse ScrollWheel") > 0f) {
             if(camera.orthographicSize > 2) {
+                // scaleX = 1-camera.orthographicSize/2;
+                // scaleY = 1-camera.orthographicSize/2;
                 camera.orthographicSize -= zoomSpeed;
             }
         } else if(Input.GetAxis("Mouse ScrollWheel") < 0f) {
             if(camera.orthographicSize < 10) {
+                // scaleX = 1-camera.orthographicSize/2;
+                // scaleY = 1-camera.orthographicSize/2;
                 camera.orthographicSize += zoomSpeed;
             }
         }
+
+        inventory.localScale = new Vector3(scaleX, scaleY, scaleZ);
+        this.transform.position = new Vector3(xPos, yPos, zPos);
     }
 }
