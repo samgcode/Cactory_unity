@@ -844,7 +844,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1421244114}
   - component: {fileID: 1421244113}
-  - component: {fileID: 1421244115}
   m_Layer: 0
   m_Name: SelectedItem
   m_TagString: Untagged
@@ -910,27 +909,59 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421244112}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.01, y: 4.22, z: -8.524013}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
-  m_Children:
-  - {fileID: 1733762000}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1461995545}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1421244115
+--- !u!1 &1461995543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461995545}
+  - component: {fileID: 1461995544}
+  m_Layer: 0
+  m_Name: selected item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1461995544
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421244112}
+  m_GameObject: {fileID: 1461995543}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7af3f8a2309224ccabf44c10f956e44a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 5605331306309330214, guid: 7088cafc63e63462095ac74c6e037af3, type: 3}
+--- !u!4 &1461995545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461995543}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.01, y: 4.22, z: -8.524013}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_Children:
+  - {fileID: 1421244114}
+  - {fileID: 1733762000}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1505894597
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,8 +1024,8 @@ RectTransform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 1093551966}
-  m_Father: {fileID: 1421244114}
-  m_RootOrder: 0
+  m_Father: {fileID: 1461995545}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1209,7 +1240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedItem: empty
   inventory: {fileID: 1048122949}
-  mouseParticleSystem: {fileID: 1421244115}
+  mouseParticleSystem: {fileID: 1461995544}
   itemCountText: {fileID: 1093551967}
   selectedItemRenderer: {fileID: 1421244113}
   sprites:

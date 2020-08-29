@@ -15,8 +15,6 @@ power system:
 - to many items
 - world border textures
     - water ?
-- BUG inventory is bigger when zooming in
-- save machine rotations
 
 - upgrades
 - saving system
@@ -46,3 +44,5 @@ X make red cactus spot in inventory blank instead
 X BUG clicking on red cactus selects juice cactus
 X title screen
 X BUG rotating machines moves produced items
+X BUG inventory is bigger when zooming in
+X save machine rotations

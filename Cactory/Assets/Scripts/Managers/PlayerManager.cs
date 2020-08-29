@@ -18,6 +18,12 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject[] machinePrefabs;
 
+    int rotation = 0;
+
+    void Start() {
+        selectedItemRenderer.transform.Rotate (Vector3.forward * 90);    
+    }
+
     void Update() {
         if(Input.GetKeyDown(KeyCode.Q)) {
             selectedItem = "empty";
@@ -59,6 +65,7 @@ public class PlayerManager : MonoBehaviour
                         selectedItem = "miner";
                     }
                     removeItem(selectedItem, 1);
+                    tile.transform.eulerAngles = new Vector3(tile.transform.eulerAngles.x, tile.transform.eulerAngles.y, rotation);
                     tile.hasMachine = true;
                 }
             }
@@ -120,10 +127,15 @@ public class PlayerManager : MonoBehaviour
     }
 
     public void rotateTile(Tile tile) {
-        if(tile.hasMachine) {
-            Transform tileTransform = tile.GetComponent<Transform>();
-            tileTransform.Rotate (Vector3.forward * -90);
+        // if(tile.hasMachine) {
+        //     Transform tileTransform = tile.GetComponent<Transform>();
+        //     tileTransform.Rotate (Vector3.forward * -90);
+        // }
+        rotation -= 90;
+        if(rotation <= 0) {
+            rotation = 360;
         }
+        selectedItemRenderer.transform.Rotate (Vector3.forward * -90);
     }
 
 
