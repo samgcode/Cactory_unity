@@ -55,25 +55,19 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        float scaleX = inventory.localScale.x;
-        float scaleY = inventory.localScale.y;
-        float scaleZ = inventory.localScale.z;
-
         if(Input.GetAxis("Mouse ScrollWheel") > 0f) {
             if(camera.orthographicSize > 2) {
-                // scaleX = 1-camera.orthographicSize/2;
-                // scaleY = 1-camera.orthographicSize/2;
                 camera.orthographicSize -= zoomSpeed;
             }
         } else if(Input.GetAxis("Mouse ScrollWheel") < 0f) {
             if(camera.orthographicSize < 10) {
-                // scaleX = 1-camera.orthographicSize/2;
-                // scaleY = 1-camera.orthographicSize/2;
                 camera.orthographicSize += zoomSpeed;
             }
         }
 
-        inventory.localScale = new Vector3(scaleX, scaleY, scaleZ);
+        float width = Camera.main.orthographicSize * 2.0f * Screen.width / Screen.height;
+        inventory.localScale = new Vector3(width / 17f, width / 17f, inventory.localScale.z);
+
         this.transform.position = new Vector3(xPos, yPos, zPos);
     }
 }

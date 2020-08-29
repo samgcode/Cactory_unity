@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - AddParticle
     - Arrow
     - Beacon
-    - CactusJuicer
     - CameraController
     - Collector
     - Conveyor
@@ -46,8 +45,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -102,8 +103,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12094}
     - Class: 114
       Script: {instanceID: 12318}
-    - Class: 114
-      Script: {instanceID: 12336}
     - Class: 114
       Script: {instanceID: 12444}
     - Class: 114
@@ -305,7 +304,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 180dc9c2c0f58ae027f0366de6d4e354
+      Hash: 717e1bd99f7487d331b8a5145974eebf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraController
@@ -521,7 +520,7 @@ ScriptsOnlyBuild:
     className: Beacon
   - hash:
       serializedVersion: 2
-      Hash: ec8490e27dbb858b58123b3c2fe7e62f
+      Hash: 41f7b043208e0bb2e378ce5c9f97ac17
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Miner
@@ -1113,4 +1112,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/New Game.unity
   - Assets/Scenes/Main scene.unity
   playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Mac
-    OS X/V0.4.0.0.app
+    OS X/V0.4.0.2.app
