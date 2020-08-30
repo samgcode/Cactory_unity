@@ -5,15 +5,21 @@ using UnityEngine;
 public class Conveyor : MonoBehaviour
 {
     public int speed = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public ConveyorBeltManager conveyorBeltManager;
+    public SpriteRenderer wallRenderer;
+    public SpriteRenderer cornerRenderer;
+
+    public Settings settings;
+    int worldSize = 0;
+    
+    void Awake() {
+        settings = FindObjectOfType<Settings>();
+        worldSize = settings.worldSize;
+
+        conveyorBeltManager = FindObjectOfType<ConveyorBeltManager>();
+        int x = Mathf.RoundToInt(transform.position.x);
+        int y = Mathf.RoundToInt(transform.position.y);
+        conveyorBeltManager.conveyors[x + worldSize/2, y + worldSize/2] = this;
     }
 }

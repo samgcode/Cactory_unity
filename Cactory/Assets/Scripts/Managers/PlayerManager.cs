@@ -66,6 +66,10 @@ public class PlayerManager : MonoBehaviour
                     }
                     removeItem(selectedItem, 1);
                     tile.transform.eulerAngles = new Vector3(tile.transform.eulerAngles.x, tile.transform.eulerAngles.y, rotation);
+                    if(tile.GetComponentInChildren<ConveyorWalls>()) {
+                        ConveyorWalls conveyorWalls = tile.GetComponentInChildren<ConveyorWalls>();
+                        conveyorWalls.transform.eulerAngles = new Vector3(conveyorWalls.transform.eulerAngles.x, conveyorWalls.transform.eulerAngles.y, 0);
+                    }
                     tile.hasMachine = true;
                 }
             }
@@ -127,10 +131,14 @@ public class PlayerManager : MonoBehaviour
     }
 
     public void rotateTile(Tile tile) {
-        // if(tile.hasMachine) {
-        //     Transform tileTransform = tile.GetComponent<Transform>();
-        //     tileTransform.Rotate (Vector3.forward * -90);
-        // }
+        if(tile.hasMachine) {
+            Transform tileTransform = tile.GetComponent<Transform>();
+            tileTransform.Rotate (Vector3.forward * -90);
+            if(tile.GetComponentInChildren<ConveyorWalls>()) {
+                ConveyorWalls conveyorWalls = tile.GetComponentInChildren<ConveyorWalls>();
+                conveyorWalls.transform.Rotate (Vector3.forward * 90);
+            }
+        }
         rotation -= 90;
         if(rotation <= 0) {
             rotation = 360;

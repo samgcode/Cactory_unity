@@ -513,7 +513,7 @@ MonoBehaviour:
   beacons: 0
   drills: 0
   cactusJuicers: 1
-  conveyors: 0
+  conveyors: 1000
   miners: 0
   collectors: 0
   slotPrefab: {fileID: 5814432234093476985, guid: d0adbe56a8e0248338cf05ad7beb6726, type: 3}
@@ -1187,6 +1187,7 @@ GameObject:
   - component: {fileID: 2147436138}
   - component: {fileID: 2147436139}
   - component: {fileID: 2147436140}
+  - component: {fileID: 2147436141}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1263,6 +1264,53 @@ MonoBehaviour:
   - {fileID: 1750236631730339601, guid: 78fa9728c52894af7b13b19a9a5160ab, type: 3}
   - {fileID: 2856068979011549689, guid: 3ca017d32c2804fa6ad70975c57bad5f, type: 3}
   - {fileID: 5935327310531144706, guid: 9ce4d224fc27340e5b4caa9fcbb69236, type: 3}
+--- !u!114 &2147436141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147436137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7d2267a8a824d8486570e9b14f0f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 0}
+  wallSprites:
+  - {fileID: 21300000, guid: e2202150b497d4b77b4aa5d792227b01, type: 3}
+  - {fileID: 21300000, guid: aba4f076a357e429ba19f4d4dc389c40, type: 3}
+  - {fileID: 21300000, guid: 1004b80a7125d49f889d80dc413f09cd, type: 3}
+  - {fileID: 21300000, guid: c77a28d33e4d14f41939d48f3eaacebf, type: 3}
+  - {fileID: 21300000, guid: 7fb1b2cf622b64b84b2bc3e17c342da7, type: 3}
+  - {fileID: 21300000, guid: 3ab8078b8ee1949cb8c5e82276c84b0c, type: 3}
+  - {fileID: 21300000, guid: eb0b7ca25508445f38f7e543714599f3, type: 3}
+  - {fileID: 21300000, guid: 8113aa706600a491ea02065ed3c0c10b, type: 3}
+  - {fileID: 21300000, guid: e739345a7600c4476be5bb880f75f37e, type: 3}
+  - {fileID: 21300000, guid: dd8a79a8374e0494395ca804ea51fc7c, type: 3}
+  - {fileID: 21300000, guid: 6b973ed5ff621467f937b15fec32e508, type: 3}
+  - {fileID: 21300000, guid: 6654d64838570442f9fee0ff3ecbede9, type: 3}
+  - {fileID: 21300000, guid: cc952856b94d845229e291708ecd488c, type: 3}
+  - {fileID: 21300000, guid: 2beb920e0cee542c5ad41737e66eb792, type: 3}
+  - {fileID: 21300000, guid: c30dd1725fcdd4914b670fda2204f8f0, type: 3}
+  - {fileID: 21300000, guid: 5098423c8b6db4eca8c60f2408c1d2e7, type: 3}
+  cornerSprites:
+  - {fileID: 21300000, guid: 607595297c57d4f9f923ac1e206746ec, type: 3}
+  - {fileID: 21300000, guid: 4f86b34d49e114fd1a90b1f312ed0b81, type: 3}
+  - {fileID: 21300000, guid: 02ddc5e884d454548b76b3d875b1ef39, type: 3}
+  - {fileID: 21300000, guid: 314095eb8df4149fcbcf6da1ddc21a08, type: 3}
+  - {fileID: 21300000, guid: 5ff70c4014e7f46c9a5cc3478c796f82, type: 3}
+  - {fileID: 21300000, guid: d60a9d20e4bcf488dbbb286f3b3ceaf1, type: 3}
+  - {fileID: 21300000, guid: 42c9d0cca6c9a493da4803e1b85de013, type: 3}
+  - {fileID: 21300000, guid: 2e34f0cb222ab43b4906d387d18eeb9a, type: 3}
+  - {fileID: 21300000, guid: e0ae9d29cbbf64a0084dcf70ab03b68b, type: 3}
+  - {fileID: 21300000, guid: f480c59336db8451a918505619435fc3, type: 3}
+  - {fileID: 21300000, guid: 5d256ae95f5aa473885c94e8683bc7e1, type: 3}
+  - {fileID: 21300000, guid: a69577836d36242388cc92092bd6a45c, type: 3}
+  - {fileID: 21300000, guid: c1408d6cbdebc4eb194f2c186c2bfcfe, type: 3}
+  - {fileID: 21300000, guid: aea11873d37e14c01a21cb6f7c2dc5ab, type: 3}
+  - {fileID: 21300000, guid: bfe87ab86c69b47c59fcb6edd9486adb, type: 3}
+  - {fileID: 21300000, guid: 211a350adceca4b41a42c1bfcb918789, type: 3}
 --- !u!23 &9216854335954290244
 MeshRenderer:
   m_ObjectHideFlags: 0
