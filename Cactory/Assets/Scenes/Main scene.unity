@@ -1139,7 +1139,17 @@ MonoBehaviour:
   cactusTilePrefab: {fileID: 1375493670818836398, guid: 408514fba034d44cda7f95738fab64ba, type: 3}
   ironTilePrefab: {fileID: 9065217321625436494, guid: 2ac2703a81bd045a4a2dbafb9626a96e, type: 3}
   crystalTilePrefab: {fileID: 2223981735865878105, guid: 14756e398917441c88a847e13bb90193, type: 3}
+  water: {fileID: 2663895831465224087, guid: c924c676faa154430ae50a31015006a7, type: 3}
+  north: {fileID: 9149902311978285454, guid: 3752a4d44bf0a4ae6aa03c4800738607, type: 3}
+  east: {fileID: 1681554135237721747, guid: 363eeb801c34f44bfa8c33c795397368, type: 3}
+  south: {fileID: 8715476002554513689, guid: 9f85c3ae1a7374743b2a107326bfe019, type: 3}
+  west: {fileID: 8032864978162174724, guid: c5a0ccf2cd53c492fa772896edff4263, type: 3}
+  northEast: {fileID: 5080440809194104410, guid: 5f045102815c946e19db544d5f9e2045, type: 3}
+  southEast: {fileID: 8823739726023930483, guid: f58a7fbe43a7346baa819ab539731ec9, type: 3}
+  northWest: {fileID: 2111251453544570008, guid: 3da4e90ada3804686928554be933dc9b, type: 3}
+  southWest: {fileID: 4749579552717124877, guid: 7422fb01f29944b58a6047d86da72d27, type: 3}
   worldSize: 100
+  bufferSize: 10
 --- !u!1 &2036332435
 GameObject:
   m_ObjectHideFlags: 0

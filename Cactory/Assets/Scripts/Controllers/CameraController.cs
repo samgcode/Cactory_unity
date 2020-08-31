@@ -19,17 +19,20 @@ public class CameraController : MonoBehaviour
 
     public float zoomSpeed;
 
-    void Awake() {
+    void Start() {
+        // Debug.Log(mapGenerator.worldSize);
+        
+    } 
+
+    void FixedUpdate()
+    {
         int halfWorldSize = mapGenerator.worldSize / 2;
         maxX = halfWorldSize - 10;
         maxY = halfWorldSize - 6;
 
         minX = -1 * (halfWorldSize - 9);
         minY = -1 * (halfWorldSize - 5);
-    } 
 
-    void FixedUpdate()
-    {
         float xPos = this.transform.position.x;
         float yPos = this.transform.position.y;
         float zPos = this.transform.position.z;

@@ -9,7 +9,12 @@ power system:
         - input cactus juice to make power
     - power pole conections
 
-- connected conveyor textures
+auto crafting:
+
+- sorter 
+    - you set an item and that item goes one way and the rest go the other way
+
+
 - menu
 - underground conveyors
 - to many items
@@ -46,3 +51,4 @@ X title screen
 X BUG rotating machines moves produced items
 X BUG inventory is bigger when zooming in
 X save machine rotations
+X make connected textures for conveyors

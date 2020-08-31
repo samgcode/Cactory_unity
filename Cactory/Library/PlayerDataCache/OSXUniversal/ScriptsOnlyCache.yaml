@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - Collector
     - Conveyor
     - ConveyorBeltManager
+    - ConveyorWalls
     - Crafting
     - FollowMouse
     - GameManager
@@ -146,6 +147,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15170}
     - Class: 114
       Script: {instanceID: 23376}
+    - Class: 114
+      Script: {instanceID: 31082}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -625,7 +628,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 341559f176b33a4c383030d82937dc31
+      Hash: d55a4bfa7695e979667c95b79eafd349
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GenerateMap
@@ -667,7 +670,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: d183a4d79e4d37b09940e66d1098bc1e
+      Hash: 0c341ae18133837fdbcfbaa7084877ff
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Conveyor
@@ -1111,14 +1114,20 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 9ae09414cd9f4761da84b044f525b359
+      Hash: 33bc60ebe29a5fc5b02b03e9a390de84
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ConveyorBeltManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ConveyorWalls
   platform: 2
   scenePathNames:
   - Assets/Scenes/Title screen.unity
   - Assets/Scenes/New Game.unity
   - Assets/Scenes/Main scene.unity
-  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Test
-    builds/Test 4.app
+  playerPath: /Volumes/2TB EXTERNA/Unity/Projects/Cactory_unity/Cactory/Builds/Mac
+    OS X/V0.4.3.0.app
