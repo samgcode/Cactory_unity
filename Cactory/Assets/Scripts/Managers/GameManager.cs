@@ -13,10 +13,16 @@ public class GameManager : MonoBehaviour
     public Crafting crafting;
     public Settings settings;
 
+    public Tile[,] tiles;
+
+    public int worldSize;
+
     void Start()
     {
         settings = FindObjectOfType<Settings>();
-        mapGenerator.generateWorld(settings.worldSize);
+        worldSize = settings.worldSize;
+        tiles = new Tile[worldSize * 2, worldSize * 2];
+        mapGenerator.generateWorld(worldSize);
 
         inventoryOpen = false;
     }
@@ -58,9 +64,7 @@ public class GameManager : MonoBehaviour
                             if(player.selectedItem == "empty") {
                                 player.mineTile(tile);
                             } else {
-                                if(!tile.hasMachine) {
-                                    player.placeItem(tile);
-                                }
+                                player.placeItem(tile);
                             }
                         }
                     } else if(Input.GetMouseButtonDown(1)) {
@@ -68,11 +72,14 @@ public class GameManager : MonoBehaviour
                     } else if(Input.GetKeyDown(KeyCode.R)) {
                         player.rotateTile(tile);
                     }  
+                    if(player.selectedItem == "generator") {
+                        player.showAreaOfEffect(tile);
+                    }
                 } else {
                     if(Input.GetMouseButtonDown(0)) {
                         if(entity.GetComponent<Slot>()) {
                             Slot slot = entity.GetComponent<Slot>();
-                            player.selectedItem = slot.item;
+                            player.setSelectedItem(slot.item);
                         }
                     }
                 }

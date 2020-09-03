@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GenerateMap : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     public GameObject tilePrefab;
     public GameObject cactusTilePrefab;
     public GameObject ironTilePrefab;

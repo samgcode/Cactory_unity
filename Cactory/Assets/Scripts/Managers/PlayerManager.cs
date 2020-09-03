@@ -18,15 +18,18 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject[] machinePrefabs;
 
+    public GameManager manager;
+
     int rotation = 0;
 
+    //start
     void Start() {
         selectedItemRenderer.transform.Rotate (Vector3.forward * 90);    
     }
 
     void Update() {
         if(Input.GetKeyDown(KeyCode.Q)) {
-            selectedItem = "empty";
+            setSelectedItem("empty");
         }
         if(selectedItemRenderer.sprite.name != selectedItem) {
             foreach(Sprite sprite in sprites) {
@@ -72,28 +75,57 @@ public class PlayerManager : MonoBehaviour
                     }
                     tile.hasMachine = true;
                 }
+            } else if(getItemType(selectedItem) == "juice") {
+                if(canUseItem(tile)) {
+                    removeItem(selectedItem, 1);
+                    Generator generator = tile.GetComponentInChildren<Generator>();
+                    generator.Generate();
+                }
             }
         }  
     }
 
+    public void setSelectedItem(string item) {
+        selectedItem = item;
+        for(int x = 0; x < manager.worldSize * 2 - 1; x++) {
+           for(int y = 0; y < manager.worldSize * 2 - 1; y++) {
+                AoeHoverable aoeTile;
+                if(manager.tiles[x, y] != null) {
+                    aoeTile = manager.tiles[x, y].GetComponentInChildren<AoeHoverable>();
+                    aoeTile.hovering = false;
+                }
+            }
+        }
+    }
+
     public bool canPlace(Tile tile) {
         if(!tile.hasMachine) {
-            if(selectedItem == "cactus juicer") {
-                if(!tile.hasCactus) {
-                    return false;
+            if(getItemType(selectedItem) == "machine") {
+                if(selectedItem == "cactus juicer") {
+                    if(!tile.hasCactus) {
+                        return false;
+                    }
                 }
-            }
-            if(selectedItem == "miner") {
-                if(!tile.hasIron && !tile.hasCactus) {
-                    return false;
+                if(selectedItem == "miner") {
+                    if(!tile.hasIron && !tile.hasCactus) {
+                        return false;
+                    }
                 }
-            }
-            if(selectedItem == "laser drill") {
-                if(!tile.hasCrystal) {
-                    return false;
+                if(selectedItem == "laser drill") {
+                    if(!tile.hasCrystal) {
+                        return false;
+                    }
                 }
+            } else {
+                return false;
             }
         } else {
+            return false;
+        }
+        return checkItem(selectedItem, 1);
+    }
+    public bool canUseItem(Tile tile) {
+        if(!tile.GetComponentInChildren<Generator>()) {
             return false;
         }
         return checkItem(selectedItem, 1);
@@ -146,6 +178,28 @@ public class PlayerManager : MonoBehaviour
         selectedItemRenderer.transform.Rotate (Vector3.forward * -90);
     }
 
+    public void showAreaOfEffect(Tile tile) {
+        int tileX = Mathf.RoundToInt(tile.transform.position.x) + manager.worldSize/2;
+        int tileY = Mathf.RoundToInt(tile.transform.position.y) + manager.worldSize/2;
+        for(int x = 0; x < manager.worldSize * 2 - 1; x++) {
+           for(int y = 0; y < manager.worldSize * 2 - 1; y++) {
+                AoeHoverable aoeTile;
+                if(manager.tiles[x, y] != null) {
+                    if(
+                        x >= tileX - 2 && x <= tileX + 2 &&
+                        y >= tileY - 2 && y <= tileY + 2
+                    ) {
+                        aoeTile = manager.tiles[x, y].GetComponentInChildren<AoeHoverable>();
+                        aoeTile.hovering = true;
+                    } else {
+                        aoeTile = manager.tiles[x, y].GetComponentInChildren<AoeHoverable>();
+                        aoeTile.hovering = false;
+                    }
+                }
+            }
+        }
+    }
+
 
     public void addItem(string item, int amount) {
         switch(item) {
@@ -181,6 +235,9 @@ public class PlayerManager : MonoBehaviour
             break;
             case "laser drill":
                 inventory.drills += amount;
+            break;
+            case "generator":
+                inventory.generators += amount;
             break;
         }
     }
@@ -228,6 +285,9 @@ public class PlayerManager : MonoBehaviour
             case "laser drill":
                 inventoryAmount = inventory.drills;
             break;
+            case "generator":
+                inventoryAmount = inventory.generators;
+            break;
         }
 
         return inventoryAmount;
@@ -268,13 +328,16 @@ public class PlayerManager : MonoBehaviour
             case "laser drill":
                 inventory.drills -= amount;
             break;
+            case "generator":
+                inventory.generators -= amount;
+            break;
         }
     }
 
     public string getItemType(string item) {
         switch(item) {
             case "cactus juice":
-                return "usable item";
+                return "juice";
             case "beacon":
                 return "machine";
             case "cactus juicer":
@@ -288,6 +351,8 @@ public class PlayerManager : MonoBehaviour
             case "collector":
                 return "machine";
             case "laser drill":
+                return "machine";
+            case "generator":
                 return "machine";
         }
         return "item";

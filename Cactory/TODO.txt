@@ -18,8 +18,6 @@ auto crafting:
 - menu
 - underground conveyors
 - to many items
-- world border textures
-    - water ?
 
 - upgrades
 - saving system
@@ -52,3 +50,5 @@ X BUG rotating machines moves produced items
 X BUG inventory is bigger when zooming in
 X save machine rotations
 X make connected textures for conveyors
+X world border textures
+    - water ?

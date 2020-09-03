@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public int cactus = 3;
-    public int iron = 5;
-    public int juice = 4;
+    public int cactus = 0;
+    public int iron = 0;
+    public int juice = 0;
     public int crystals = 0;
 
-    public int beacons = 1;
+    public int beacons = 0;
     public int drills = 0;
-    public int cactusJuicers = 3;
-    public int conveyors = 3;
-    public int miners = 2;
-    public int collectors = 1;
+    public int cactusJuicers = 1;
+    public int conveyors = 0;
+    public int miners = 0;
+    public int collectors = 0;
+    public int generators = 1;
     
     public GameObject slotPrefab;
 
@@ -55,7 +56,7 @@ public class Inventory : MonoBehaviour
         int[] counts = {
             cactus, iron, juice, crystals, 
             0, 0, 0, 0, 
-            beacons, drills, 0, 0, 
+            beacons, drills, generators, 0, 
             cactusJuicers, conveyors, miners, collectors
         };
         Slot[] slots = FindObjectsOfType<Slot>();
