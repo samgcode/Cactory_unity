@@ -22,7 +22,7 @@ public class GenerateMap : MonoBehaviour
     public GameObject southWest;
     
     public int worldSize = 50;
-    public int bufferSize = 10;
+    public int bufferSize = 40;
 
     int crystals = 0;
     public void generateWorld(int size)

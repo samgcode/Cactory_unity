@@ -1,12 +1,12 @@
 power system:
 
 - make sprites
-    - generator
+    X generator
     - power poles
 - code
     - make machines run off the power grid
     - generator
-        - input cactus juice to make power
+        X input cactus juice to make power
     - power pole conections
 
 auto crafting:
