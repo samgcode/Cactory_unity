@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Generator : MonoBehaviour
 {
-
+    public float power = 0f;
     public Animator animator;
+
+    public bool generating = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,13 +15,20 @@ public class Generator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(generating) {
+            power += 0.1f;
+        }
     }
 
     public void Generate() {
-        Debug.Log("generateing time");
+        generating = true;
         animator.Play("generator", 0, 0.0f);
+        Invoke("stopGenerating", 2f);
+    }
+
+    public void stopGenerating() {
+        generating = false;
     }
 }

@@ -19,10 +19,10 @@ public class PlayerManager : MonoBehaviour
     public GameObject[] machinePrefabs;
 
     public GameManager manager;
+    public Tile hoveringTile;
 
     int rotation = 0;
 
-    //start
     void Start() {
         selectedItemRenderer.transform.Rotate (Vector3.forward * 90);    
     }
@@ -42,6 +42,11 @@ public class PlayerManager : MonoBehaviour
             itemCountText.text = "";
         } else {
             itemCountText.text = getItemCount(selectedItem).ToString();
+        }
+        if(selectedItem == "generator") {
+            showAreaOfEffect(hoveringTile, 1);
+        } else if(selectedItem == "power pole") {
+            showAreaOfEffect(hoveringTile, 2);
         }
     }
 
@@ -178,7 +183,7 @@ public class PlayerManager : MonoBehaviour
         selectedItemRenderer.transform.Rotate (Vector3.forward * -90);
     }
 
-    public void showAreaOfEffect(Tile tile) {
+    public void showAreaOfEffect(Tile tile, int size) {
         int tileX = Mathf.RoundToInt(tile.transform.position.x) + manager.worldSize/2;
         int tileY = Mathf.RoundToInt(tile.transform.position.y) + manager.worldSize/2;
         for(int x = 0; x < manager.worldSize * 2 - 1; x++) {
@@ -186,8 +191,8 @@ public class PlayerManager : MonoBehaviour
                 AoeHoverable aoeTile;
                 if(manager.tiles[x, y] != null) {
                     if(
-                        x >= tileX - 2 && x <= tileX + 2 &&
-                        y >= tileY - 2 && y <= tileY + 2
+                        x >= tileX - size && x <= tileX + size &&
+                        y >= tileY - size && y <= tileY + size
                     ) {
                         aoeTile = manager.tiles[x, y].GetComponentInChildren<AoeHoverable>();
                         aoeTile.hovering = true;
@@ -239,6 +244,9 @@ public class PlayerManager : MonoBehaviour
             case "generator":
                 inventory.generators += amount;
             break;
+            case "power pole":
+                inventory.poles += amount;
+            break;
         }
     }
 
@@ -288,6 +296,9 @@ public class PlayerManager : MonoBehaviour
             case "generator":
                 inventoryAmount = inventory.generators;
             break;
+            case "power pole":
+                inventoryAmount = inventory.poles;
+            break;
         }
 
         return inventoryAmount;
@@ -331,6 +342,9 @@ public class PlayerManager : MonoBehaviour
             case "generator":
                 inventory.generators -= amount;
             break;
+            case "power pole":
+                inventory.poles -= amount;
+            break;
         }
     }
 
@@ -353,6 +367,8 @@ public class PlayerManager : MonoBehaviour
             case "laser drill":
                 return "machine";
             case "generator":
+                return "machine";
+            case "power pole":
                 return "machine";
         }
         return "item";

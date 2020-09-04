@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     public int miners = 0;
     public int collectors = 0;
     public int generators = 1;
+    public int poles = 5;
     
     public GameObject slotPrefab;
 
@@ -56,7 +57,7 @@ public class Inventory : MonoBehaviour
         int[] counts = {
             cactus, iron, juice, crystals, 
             0, 0, 0, 0, 
-            beacons, drills, generators, 0, 
+            beacons, drills, generators, poles, 
             cactusJuicers, conveyors, miners, collectors
         };
         Slot[] slots = FindObjectsOfType<Slot>();

@@ -517,6 +517,7 @@ MonoBehaviour:
   miners: 0
   collectors: 0
   generators: 1
+  poles: 5
   slotPrefab: {fileID: 5814432234093476985, guid: d0adbe56a8e0248338cf05ad7beb6726, type: 3}
   sprites:
   - {fileID: 21300000, guid: 1eb416ae8de01419ea3a6cad36a22d39, type: 3}
@@ -530,7 +531,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cde427a5af2d845a18ad2c3fc750e353, type: 3}
   - {fileID: 21300000, guid: 969511333aee849518c13f60b2cefce2, type: 3}
   - {fileID: 21300000, guid: 72a01eacc334e43e5b0abd6c4471d7e7, type: 3}
-  - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
+  - {fileID: 21300000, guid: feed1e575960b4e8683518d6df88151b, type: 3}
   - {fileID: 21300000, guid: c0acc3c8b9bcb4a87af762e3deaf3a5d, type: 3}
   - {fileID: 21300000, guid: aeb9ae5daad8a4403b80975e641dd34e, type: 3}
   - {fileID: 21300000, guid: 1ac83928531b7475d9390e0407f817e7, type: 3}
@@ -547,7 +548,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e63b8bb95af4e4ebd98941b785eb7435, type: 3}
   - {fileID: 21300000, guid: a1aa8dc65dd624154987f86503c6f35a, type: 3}
   - {fileID: 21300000, guid: bdbcb59717d9340c4b693ae371f09109, type: 3}
-  - {fileID: 21300000, guid: fae047170382646cb8f45c69be4badaf, type: 3}
+  - {fileID: 21300000, guid: dac0bf4b1116b4a68b1fbdc59e4d9475, type: 3}
   - {fileID: 21300000, guid: 1ecdf02f700d44fed96272dca7350ab9, type: 3}
   - {fileID: 21300000, guid: f3772c970996d4e81bbae7a3916e4c8c, type: 3}
   - {fileID: 21300000, guid: 06a7e8d1004d54994b990c5582d7cedf, type: 3}
@@ -955,7 +956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461995543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.01, y: 4.22, z: -8.524013}
+  m_LocalPosition: {x: -8.01, y: 4.22, z: -99}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 1421244114}
@@ -1269,6 +1270,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 969511333aee849518c13f60b2cefce2, type: 3}
   - {fileID: 21300000, guid: 3a095d7a3445c46d49b83aa1ade26eed, type: 3}
   - {fileID: 21300000, guid: 72a01eacc334e43e5b0abd6c4471d7e7, type: 3}
+  - {fileID: 21300000, guid: feed1e575960b4e8683518d6df88151b, type: 3}
   machinePrefabs:
   - {fileID: 585398390193041129, guid: 803f379d9e7a249c8af6a2c56dcf8a2a, type: 3}
   - {fileID: 984025297707980864, guid: 523d47838d9ed4a80bf5e70ecf7d95ff, type: 3}
@@ -1278,6 +1280,7 @@ MonoBehaviour:
   - {fileID: 2856068979011549689, guid: 3ca017d32c2804fa6ad70975c57bad5f, type: 3}
   - {fileID: 5935327310531144706, guid: 9ce4d224fc27340e5b4caa9fcbb69236, type: 3}
   - {fileID: 5933043408278643408, guid: 4a3f8197758fa4493ae5d14b3b617dcd, type: 3}
+  - {fileID: 8156947185548466297, guid: fbac1f50f60cb474fb09c939cbbffa08, type: 3}
   manager: {fileID: 2147436139}
 --- !u!114 &2147436141
 MonoBehaviour:

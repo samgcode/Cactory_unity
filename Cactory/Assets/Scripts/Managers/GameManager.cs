@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
                 }
                 if(entity.GetComponent<Tile>()) {
                     Tile tile = entity.GetComponent<Tile>();
+                    player.hoveringTile = tile;
                     if(Input.GetMouseButtonDown(0)) {    
                         if(!inventoryOpen) {
                             if(player.selectedItem == "empty") {
@@ -72,9 +73,6 @@ public class GameManager : MonoBehaviour
                     } else if(Input.GetKeyDown(KeyCode.R)) {
                         player.rotateTile(tile);
                     }  
-                    if(player.selectedItem == "generator") {
-                        player.showAreaOfEffect(tile);
-                    }
                 } else {
                     if(Input.GetMouseButtonDown(0)) {
                         if(entity.GetComponent<Slot>()) {
