@@ -5,7 +5,7 @@ using TMPro;
 
 public class Crafting : MonoBehaviour
 {
-    public PlayerManager player;
+    public InventoryService inventoryService;
 
     public GameObject[] recipes;
 
@@ -45,16 +45,16 @@ public class Crafting : MonoBehaviour
 
     public void craft(Recipe recipe) {
         if(canCraft(recipe)) {
-            player.addItem(recipe.result, recipe.resultCount);
+            inventoryService.addItem(recipe.result, recipe.resultCount);
             for(int i = 0; i < recipe.ingredients.Length; i++) {
-                player.removeItem(recipe.ingredients[i], recipe.ingredientCounts[i]);
+                inventoryService.removeItem(recipe.ingredients[i], recipe.ingredientCounts[i]);
             }
         }
     }
 
     bool canCraft(Recipe recipe) {
         for(int i = 0; i < recipe.ingredients.Length; i++) {
-            if(player.checkItem(recipe.ingredients[i], recipe.ingredientCounts[i]) == false) {
+            if(inventoryService.checkItem(recipe.ingredients[i], recipe.ingredientCounts[i]) == false) {
                 return false;
             }
         }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GroundItem : MonoBehaviour
 {
-    public PlayerManager player;
+    public InventoryService inventoryService;
 
     void Start() {
-        player = FindObjectOfType<PlayerManager>();    
+        inventoryService = FindObjectOfType<InventoryService>();    
     }
     void Update() {
         this.transform.eulerAngles = new Vector3(
@@ -25,7 +25,7 @@ public class GroundItem : MonoBehaviour
         }
         if(other.GetComponent<Collector>()) {
             SpriteRenderer renderer = this.GetComponent<SpriteRenderer>();
-            player.addItem(renderer.sprite.name, 1);
+            inventoryService.addItem(renderer.sprite.name, 1);
             Destroy(this.gameObject);
         }
     }

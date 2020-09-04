@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject inventory;
     public GenerateMap mapGenerator;
     public PlayerManager player;
+    public InventoryService inventoryService;
     public Crafting crafting;
     public Settings settings;
 
@@ -95,7 +96,7 @@ public class GameManager : MonoBehaviour
                 if(entity.GetComponent<GroundItem>()) {
                     if(Input.GetMouseButtonDown(0)) {
                         SpriteRenderer renderer = entity.GetComponent<SpriteRenderer>();
-                        player.addItem(renderer.sprite.name, 1);
+                        inventoryService.addItem(renderer.sprite.name, 1);
                         Destroy(entity.gameObject);
                     }
                 }

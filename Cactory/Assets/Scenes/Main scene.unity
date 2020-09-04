@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9eea34e712ce478ebbae8e4d5d490e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2147436140}
+  inventoryService: {fileID: 966359495}
   recipes:
   - {fileID: 5018085676265886728, guid: 781043e74061c44d196d481de820bfa0, type: 3}
   - {fileID: 7490833736630004908, guid: 373d26ebf7759481588a04b839df1fc0, type: 3}
@@ -409,6 +409,63 @@ Transform:
   - {fileID: 1505894598}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &966359493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966359496}
+  - component: {fileID: 966359495}
+  - component: {fileID: 966359494}
+  m_Layer: 0
+  m_Name: Game service
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &966359494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966359493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca08de2405aa54bb7acf6f773c183c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &966359495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966359493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361781f4a5d5041d9bcc3c05e2e57300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 1048122949}
+--- !u!4 &966359496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966359493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4144129, y: -0.20785558, z: -93.167984}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1048122946
 GameObject:
@@ -1237,6 +1294,7 @@ MonoBehaviour:
   inventory: {fileID: 1048122946}
   mapGenerator: {fileID: 1772477607}
   player: {fileID: 2147436140}
+  inventoryService: {fileID: 966359495}
   crafting: {fileID: 39366516}
   settings: {fileID: 0}
   worldSize: 0
@@ -1253,7 +1311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedItem: empty
-  inventory: {fileID: 1048122949}
+  inventoryService: {fileID: 966359495}
   mouseParticleSystem: {fileID: 1461995544}
   itemCountText: {fileID: 1093551967}
   selectedItemRenderer: {fileID: 1421244113}
@@ -1282,6 +1340,7 @@ MonoBehaviour:
   - {fileID: 5933043408278643408, guid: 4a3f8197758fa4493ae5d14b3b617dcd, type: 3}
   - {fileID: 8156947185548466297, guid: fbac1f50f60cb474fb09c939cbbffa08, type: 3}
   manager: {fileID: 2147436139}
+  hoveringTile: {fileID: 0}
 --- !u!114 &2147436141
 MonoBehaviour:
   m_ObjectHideFlags: 0
