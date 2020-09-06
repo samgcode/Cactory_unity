@@ -15,7 +15,7 @@ public class PlayerService : MonoBehaviour
         int tileX = Mathf.RoundToInt(tile.transform.position.x) + manager.worldSize/2;
         int tileY = Mathf.RoundToInt(tile.transform.position.y) + manager.worldSize/2;
 
-        Tile[] tiles = new Tile[range * range];
+        Tile[] tiles = new Tile[(range + 2) * (range + 2)];
         int id = 0;
         for(int x = 0; x < manager.worldSize * 2 - 1; x++) {
            for(int y = 0; y < manager.worldSize * 2 - 1; y++) {
@@ -33,5 +33,17 @@ public class PlayerService : MonoBehaviour
         return tiles;
     }
 
-    
+    public PowerNode getNodeInRange(Tile tile) {
+        PowerNode[] powerNodes = FindObjectsOfType<PowerNode>();
+        foreach(PowerNode node in powerNodes) {
+            GameObject nodeParent = node.transform.parent.gameObject;
+            Tile[] tiles = getAoeTiles(nodeParent.GetComponent<Tile>(), node.range);
+            foreach(Tile t in tiles) {
+                if(t == tile) {
+                   return node; 
+                }
+            }
+        }
+        return null;
+    }
 }

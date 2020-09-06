@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca08de2405aa54bb7acf6f773c183c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &966359495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,7 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cactus: 0
   iron: 0
-  juice: 0
+  juice: 3
   crystals: 0
   beacons: 0
   drills: 0

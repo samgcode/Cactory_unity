@@ -106,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5737389745991901569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.829, y: 0, z: 0}
+  m_LocalPosition: {x: 0.829, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5935327310531144709}
@@ -247,3 +247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSpawnpoint: {fileID: 3102874883401165495}
   itemPrefab: {fileID: 3456718168712778212, guid: 27465761447794bc68a50c90d7692389, type: 3}
+  powerNeeded: 10
+  spawnSpeed: 3
+  playerService: {fileID: 0}

@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2046096600753231787}
   - component: {fileID: 5753217767343426935}
   - component: {fileID: 171135401218417738}
+  - component: {fileID: 7025432248006533536}
   m_Layer: 0
   m_Name: generator
   m_TagString: machine
@@ -223,6 +224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 171135401218417738}
+  powerNode: {fileID: 0}
+  generating: 0
 --- !u!95 &171135401218417738
 Animator:
   serializedVersion: 3
@@ -242,3 +245,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7025432248006533536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5933043408278643408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f3b993cacc74ae884403defffbadb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1
+  power: 0

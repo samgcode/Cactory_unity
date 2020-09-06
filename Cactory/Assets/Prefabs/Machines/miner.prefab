@@ -135,6 +135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSpawnpoint: {fileID: 5814196300269183063}
   itemPrefab: {fileID: 5774158138946729924, guid: c65c89f4f15c944f2ba243eadb5ab7ee, type: 3}
+  powerNeeded: 5
+  spawnSpeed: 3
+  playerService: {fileID: 0}
 --- !u!1 &3756214766874667873
 GameObject:
   m_ObjectHideFlags: 0
