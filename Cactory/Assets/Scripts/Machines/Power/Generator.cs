@@ -18,14 +18,15 @@ public class Generator : MonoBehaviour
     void FixedUpdate()
     {
         if(generating) {
-            powerNode.power += 0.1f;
+            powerNode.power += 0.18f;
         }
     }
 
     public void Generate() {
-        generating = true;
+        // generating = true;
         animator.Play("generator", 0, 0.0f);
-        Invoke("stopGenerating", 2f);
+        powerNode.power += 15;
+        // Invoke("stopGenerating", 2f);
     }
 
     public void stopGenerating() {

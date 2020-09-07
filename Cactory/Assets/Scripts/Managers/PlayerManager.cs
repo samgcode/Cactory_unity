@@ -79,6 +79,7 @@ public class PlayerManager : MonoBehaviour
                         conveyorWalls.transform.eulerAngles = new Vector3(conveyorWalls.transform.eulerAngles.x, conveyorWalls.transform.eulerAngles.y, 0);
                     }
                     tile.hasMachine = true;
+                    updatePowerSystem();
                 }
             } else if(inventoryService.getItemType(selectedItem) == "juice") {
                 if(canUseItem(tile)) {
@@ -88,6 +89,13 @@ public class PlayerManager : MonoBehaviour
                 }
             }
         }  
+    }
+
+    void updatePowerSystem() {
+        Miner[] miners = FindObjectsOfType<Miner>();
+        foreach(Miner miner in miners) {
+            miner.findNode();
+        }
     }
 
     public void setSelectedItem(string item) {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GroundItem : MonoBehaviour
 {
     public InventoryService inventoryService;
+    public string type = "";
 
     void Start() {
         inventoryService = FindObjectOfType<InventoryService>();    
@@ -27,6 +28,12 @@ public class GroundItem : MonoBehaviour
             SpriteRenderer renderer = this.GetComponent<SpriteRenderer>();
             inventoryService.addItem(renderer.sprite.name, 1);
             Destroy(this.gameObject);
+        } else if(other.GetComponent<Generator>()) {
+            if(type == "juice") {
+                Generator generator = other.GetComponent<Generator>();
+                generator.Generate();
+                Destroy(this.gameObject);
+            }
         }
     }
 }

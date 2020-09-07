@@ -20,28 +20,27 @@ public class Miner : MonoBehaviour
     void Start()
     {
         playerService = FindObjectOfType<PlayerService>();
-        node = playerService.getNodeInRange(transform.parent.GetComponent<Tile>());
-        if(node) {
-            hasNode = true;
-        }
+        findNode();
         animator = GetComponent<Animator>();
 
     }
 
     void Update() {
-        if(node.power >= powerNeeded) {
-            hasPower = true;
-            if(invokeCanceled) {
-                InvokeRepeating("spawnItem", 1f, spawnSpeed);
-                invokeCanceled = false;
+        if(hasNode) {
+            if(node.power >= powerNeeded) {
+                hasPower = true;
+                if(invokeCanceled) {
+                    InvokeRepeating("spawnItem", 1f, spawnSpeed);
+                    invokeCanceled = false;
+                }
+            } else {
+                hasPower = false;
+                CancelInvoke();
+                invokeCanceled = true;
             }
-        } else {
-            hasPower = false;
-            CancelInvoke();
-            invokeCanceled = true;
-        }
 
-        animator.SetBool("animating", hasPower);
+            animator.SetBool("animating", hasPower);
+        }
     }
 
     void spawnItem() {
@@ -50,6 +49,15 @@ public class Miner : MonoBehaviour
                 node.power -= powerNeeded;
                 Instantiate(itemPrefab, itemSpawnpoint.position, Quaternion.identity);
             }
+        }
+    }
+
+    public void findNode() {
+        Debug.Log("finding node...");
+        node = playerService.getNodeInRange(transform.parent.GetComponent<Tile>());
+        if(node) {
+            hasNode = true;
+            Debug.Log("node found");
         }
     }
 }
