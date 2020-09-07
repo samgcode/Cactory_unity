@@ -52,12 +52,24 @@ public class Crafting : MonoBehaviour
         }
     }
 
+    public void updateColors(Recipe recipe) {
+        resultText.color = new Color32(255, 255, 255, 255);
+        for(int i = 0; i < recipe.ingredients.Length; i++) {
+            ingredientTexts[i].color = new Color32(255, 255, 255, 255);
+            countTexts[i].color = new Color32(255, 255, 255, 255);
+        }
+    }
+
     bool canCraft(Recipe recipe) {
+        bool canCraft = true;
         for(int i = 0; i < recipe.ingredients.Length; i++) {
             if(inventoryService.checkItem(recipe.ingredients[i], recipe.ingredientCounts[i]) == false) {
-                return false;
+                resultText.color = new Color32(255, 0, 0, 255);
+                ingredientTexts[i].color = new Color32(255, 0, 0, 255);
+                countTexts[i].color = new Color32(255, 0, 0, 255);
+                canCraft =  false;
             }
         }
-        return true;
+        return canCraft;
     }
 }

@@ -14,7 +14,8 @@ auto crafting:
 - sorter 
     - you set an item and that item goes one way and the rest go the other way
 
-
+- spliter
+    - every other item goes one way0
 - menu
 - underground conveyors
 - to many items
@@ -33,7 +34,7 @@ X ablitity to mine cactus
     X code
 X removing placed items
 X notification when you mine something
-    X +1 shows up
+    X +1 shows up0
 X shows you if you can place it
     X number that showshow many of that item you have
 X line up conveyor animations

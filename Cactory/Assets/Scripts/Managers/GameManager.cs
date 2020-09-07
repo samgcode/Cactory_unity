@@ -86,6 +86,9 @@ public class GameManager : MonoBehaviour
                 if(entity.GetComponent<Recipe>()) { 
                     Recipe recipe = entity.GetComponent<Recipe>();
                     crafting.updateText(recipe);
+                    if(prevEntity && entity.id != prevEntity.id) {
+                        crafting.updateColors(recipe);
+                    }
                     if(Input.GetMouseButtonDown(0)) {
                         crafting.craft(recipe);
                     }
